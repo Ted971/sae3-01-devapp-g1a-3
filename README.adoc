@@ -52,7 +52,11 @@ toc::[]
 Projet est réalisé par::
 
 - https://github.com/Alexandre3131[Alexandre Benachir]
-- https://github.com/johnSmith[John Smith]
+- https://github.com/RMassip[Romain Massip]
+- https://github.com/Ted971[Teddy Babel]
+- https://github.com/Not-Yukii[Matthis Mabille]
+- https://github.com/Julien-D234[Julien Druelle]
+
 ...
 
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
