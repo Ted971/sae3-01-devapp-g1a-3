@@ -4,7 +4,7 @@
 
 Si ce n'est déjà fait, vous pouvez lire la documentation d'installation ici : 
 
-link:file:///home/username[Documentation d'installation]
+link:https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Installation%20Python%20G1A-3.adoc[Documentation d'installation]
 
 Ce document présente la documentation utilisateur du programme python et du fichier de configuration .ini afin de comprendre leur fonctionnement.
 
