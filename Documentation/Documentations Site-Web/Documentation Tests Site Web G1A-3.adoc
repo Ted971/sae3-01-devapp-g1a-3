@@ -1,0 +1,103 @@
+= Documentation des Tests Web G1A-3
+
+
+====
+Cette documentation montre le fonctionnement de la page de connexion / création de compte du site "La Parure Française" à travers différents tests : 
+=====
+* Le design de la page de Connexion / Création de compte :
+
+image::./imagesTest/PageDeConnexionCreation.png[ConnexionVideNonFonctionnel]
+=====
+
+=====
+Commençons par la tentative de connexion à un compte :
+
+* Si on tente de cliquer immédiatement sur le bouton _Valider_ : 
+
+image::./imagesTest/ValidationConnexionVide.png[ConnexionVideNonFonctionnel]
+
+* Si on entre des identifiants erronés : 
+
+image::./imagesTest/CompteNonFonctionnel.png[CompteNonFonctionnel]
+image::./imagesTest/IdtIncorrects.png[CompteNonFonctionnel]
+
+* Si on entre des identifiants valides et que l'on sauvegarde l'identifiant de l'utilisateur : 
+
+image::./imagesTest/ConnexionFonctionnelle.png[ConnexionCompteExistant]
+
+* Un message s'affiche comme quoi la connexion a bien effectuée : 
+
+image::./imagesTest/AffichageMessageSiConnecté.png[ConnexionTest]
+
+* L'utilisateur est renvoyé vers la page d'index :
+
+image::./imagesTest/ConnexionEffectueeRedirectionIndex.png[AffichageAprèsConnexion (connecté)]
+=====
+
+=====
+* Une fois que l'utilisateur est connecté, l'utilisateur a deux possibilités à la déconnexion :
+======
+* Il peut se déconnecter sans enlever les cookies : 
+
+image::./imagesTest/DeconnexionSansRemoveCookie.png[ConnexionNouveau]
+
+* L'identifiant est donc sauvegardé pour la prochaine connexion de l'utilisateur : 
+
+image::./imagesTest/SiDeconnexionEtCookiePresent.png[ConnexionApresDecoAvecCookie]
+
+* L'option de suppresion des cookies est donc toujours disponible dans le footer :
+
+image::./imagesTest/AjoutSuppressionCookiesFooter.png[UneFoisConnectéAvecCookie]
+
+======
+
+======
+* Sinon, l'utilisateur peut supprimer les cookies avant sa déconnexion :
+
+image::./imagesTest/SuppressionCookieSiExistant.png[SuppressionCookieUneFoisConnecteAvecCookie]
+
+* Le menu de suppression disparait du footer :
+
+image::./imagesTest/DisparissionBoutonCookieFooter.png[FooterApresClickDisparitionCookie]
+
+* Après la déconnexion de l'utilisateur, l'identifiant utilisateur aura disparu du formulaire de connexion :
+
+image::./imagesTest/ConnexionSansCookie.png[ConnexionApresAvoirEnlevéCookie]
+
+======
+
+=====
+
+=====
+
+On peut également créer un compte :
+
+* Si on tente de cliquer immédiatement sur le bouton _Valider_ : 
+
+image::./imagesTest/PbCreation.png[CreationVide]
+
+* Si l'utilisateur remplis tous les champs nécessaires pour la création du compte : 
+
+image::./imagesTest/CreationCompteClient.png[CreationCorrecteCompte]
+
+* L'utilisateur est redirigé vers l'index :
+
+image::./imagesTest/RedirectionVersIndexApresCreation.png[RedirectionIndexApresCreation (non connecté)]
+
+* On peut aller vérifier que le client a bien été créé dans la base de données et que le mot de passe entré par l'utilisateur a bien été hashé :
+
+image::./imagesTest/CreationDuClientBD.png[AjoutBDNouveauClient + Password Hash]
+
+* Après la création du compte, on peut tenter de se connecter à celui-ci avec les identifiants que l'utilisateur vient de créer :
+
+image::./imagesTest/connexionNouveauClient.png[ConnexionCompteNouveau]
+
+Même si le mot de passe est stockée en HASH, on utilise une fonction PHP permettant de s'assurer que celui entrée par l'utilisateur dans le formulaire correspond à celui dans la base de données.
+
+* La connexion fonctionne et l'utilisateur voit un message de connexion s'afficher :
+
+image::./imagesTest/AffMessageNouveauClient.png[ConnexionNouveau]
+
+=====
+
+====
