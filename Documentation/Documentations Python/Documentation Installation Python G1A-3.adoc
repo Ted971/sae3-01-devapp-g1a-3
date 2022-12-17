@@ -1,0 +1,70 @@
+= Documentation d'Instalation du programme Python G1A-3
+
+=================
+
+* Le Fonctionnement :
+
+====
+
+Pour que le programme fonctionne, celui-ci doit être lancé sur un système UNIX (_linux_ par exemple). 
+
+Un fichier de configuration en .ini devra également être situé dans le répertoire du programme car ce dernier utilise le fichier de configuration pour la récupération des paramètres.
+
+Le programme créera des fichiers dans le répertoire où est situé le programme pour chaque capteur ainsi qu'un fichier pour les dépassements de seuil.
+
+Les fichiers nécessaires au fonctionnement du programme peuvent être trouvés ici :
+
+link:file:///home/username[Programme Python + Fichier de Configuration]
+
+====
+
+* L'exécution :
+
+=====
+
+* Pour que le programme soit exécuté correctement il faut avoir la version 3 de python.
+
+** Commande a exécuter pour tester si python3 est installé :
+
+    python3 --version
+
+** Si la commande renvoie une erreur, cela signifie que python3 n'est pas installé, il vous faudra executer la commande suivante :
+
+    sudo apt-get install python3.10
+=====
+
+* Les modules requis :
+
+====
+** os
+** time
+** paho.mqtt.client 
+** json
+** signal
+** datetime
+** configparser 
+
+La plupart des extensions ci-dessus sont déjà installés. Il vous faudra tout de même installer paho.mqtt à l'aide du terminal pour pouvoir exécuter l'application.
+
+=====
+    pip install paho.mqtt
+=====
+
+====
+
+* Lancement de l'application
+
+====
+Maintenant que toutes les extensions sont installés, il vous suffit d'exécuter la commande suivante dans votre terminal : 
+
+=====
+    python3 PythonSAEG3.py
+=====
+====
+
+=================
+
+Vous pouvez maintenant consulter la documentation utilisateur expliquant le fonctionnement de l'application ici :
+
+link:file:///home/username[Documentation utilisateur]
+
