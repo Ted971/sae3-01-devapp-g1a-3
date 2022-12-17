@@ -79,7 +79,7 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 [cols="1,2,2",options=header]
 |===
 | Date    | Nom du document         |  Lien 
-| `07/11/2022` | Compte rendu du Speed Dating (choix du groupe client) | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/Compte_Rendu_SpeedDating_SAE_G1A3.pdf[Lien vers le compte rendu]  
+| `07/11/2022` | Compte rendu du Speed Dating (choix du groupe client) | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOE/Compte_Rendu_SpeedDating_SAE_G1A3.pdf[Lien vers le compte rendu]  
 |===
 
 
@@ -87,18 +87,18 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 [cols="1,2,2",options=header]
 |===========================================================
 |Date  |Nom du document               |Lien
-|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20CDCT%20G1A-3.pdf[Lien vers le CDCT]
-|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20CDCF%20G1A-3.pdf[Lien vers le CDCF]
-|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20DCE%20G1A-3.pdf[Lien vers le DCE]
+|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOA/SAE-DevApp%20CDCT%20G1A-3.pdf[Lien vers le CDCT]
+|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOA/SAE-DevApp%20CDCF%20G1A-3.pdf[Lien vers le CDCF]
+|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOA/SAE-DevApp%20DCE%20G1A-3.pdf[Lien vers le DCE]
 |===========================================================
 
 === Documentations du Site Web E-commerce client (G1B-5)
 [cols="1,2,2",options=header]
 |===========================================================
 |Date  |Nom du document               |Lien
-|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/CDCT%20G1B-5.pdf[Lien vers le CDCT Client]
-|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/CDCF%20G1B-5.pdf[Lien vers le CDCF Client]
-|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/DCE%20SAE%20G1B-5.pdf[Lien vers le DCE Client]
+|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOE/CDCT%20G1B-5.pdf[Lien vers le CDCT Client]
+|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOE/CDCF%20G1B-5.pdf[Lien vers le CDCF Client]
+|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOE/DCE%20SAE%20G1B-5.pdf[Lien vers le DCE Client]
 |===========================================================
 
 === Documentations des réalisations du Site Web E-commerce Client (G1B-5)
