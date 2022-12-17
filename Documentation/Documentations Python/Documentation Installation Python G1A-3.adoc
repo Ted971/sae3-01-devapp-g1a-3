@@ -66,5 +66,5 @@ Maintenant que toutes les extensions sont installés, il vous suffit d'exécuter
 
 Vous pouvez maintenant consulter la documentation utilisateur expliquant le fonctionnement de l'application ici :
 
-link:file:///home/username[Documentation utilisateur]
+link:https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Utilisateur%20Python%20G1A-3.adoc[Documentation utilisateur]
 
