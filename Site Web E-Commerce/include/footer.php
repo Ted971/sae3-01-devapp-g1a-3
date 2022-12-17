@@ -11,7 +11,9 @@
                             <li class="bottom"> <a href="" title="Mentions légales"> Mentions légales </a></li>
                             <li class="bottom"> <a href="" title="Données personnelles"> Données personnelles </a></li>
                             <li class="bottom"> <a href="" title="Contact"> Nous contacter </a></li>
-                            <li class="bottom"> <a href="" title="Gestion des cookies"> Gestion des cookies </a></li>
+                            <?php if (isset($_COOKIE['cookIdent'])) { ?>
+                                <li class="bottom"> <a href="GestionCookie.php" title="Suppression des cookies"> Suppression des cookies </a></li>
+                            <?php } ?>
                         </ul>
                         <div class="social_network">
                             <p> Nos réseaux sociaux</p>

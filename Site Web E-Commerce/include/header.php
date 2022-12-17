@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <header>
   <nav>
     <div id="logo">
@@ -24,7 +25,7 @@
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
                   <a href="" class="Header__nav__link--hasSubmenu">
-                    <span> Notre équipe </span> 
+                    <span> Notre équipe </span>
                   </a>
                 </li>
               </ul>
@@ -41,7 +42,7 @@
             <div class="Header__nav__submenu__block">
               <ul>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
+                  <a href="ConsultCategorie.php?nomCateg=Sous-vetements" class="Header__nav__link--hasSubmenu"> 
                     <span>Sous-vêtements</span>
                   </a>
                   <div class="Header__nav__submenu">
@@ -77,7 +78,7 @@
                   </div>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
+                  <a href="ConsultCategorie.php?nomCateg=Pyjamas" class="Header__nav__link--hasSubmenu"> 
                     <span>Pyjamas</span>
                   </a>
                   <div class="Header__nav__submenu">
@@ -103,13 +104,13 @@
                   </div>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
+                  <a href="ConsultCategorie.php?nomCateg=Vetements" class="Header__nav__link--hasSubmenu"> 
                     <span>Vêtements</span>
                   </a>
                   <div class="Header__nav__submenu">
                     <div class="Header__nav__submenu__categories">
                       <ul>
-                        <li class=""> 
+                        <li class="">
                           <a href="" class="Header__nav__link"> 
                             T-Shirts et polos
                           </a>
@@ -154,7 +155,7 @@
                   </div>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
+                  <a href="ConsultCategorie.php?nomCateg=Chaussants" class="Header__nav__link--hasSubmenu"> 
                     <span>Chaussants</span>
                   </a>
                   <div class="Header__nav__submenu">
@@ -190,7 +191,7 @@
                   </div>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
+                  <a href="ConsultCategorie.php?nomCateg=Maillots de bain" class="Header__nav__link--hasSubmenu"> 
                     <span>Maillots de Bain</span>
                   </a>
                   <div class="Header__nav__submenu">
@@ -408,9 +409,23 @@
         </form>
     </div>
     <div id="images">
-      <a href="#"><img src="images/maison.png" alt="Accueil"></a>
-      <a href="#"><img src="images/compte.png" alt="Compte"></a>
-      <a href="#"><img src="images/panier.png" alt="Panier"></a>
+      <a href="index.php"><img src="images/maison.png" alt="Accueil"></a>
+      <a href="FormConnexion.php"><img src="images/compte.png" alt="Compte"></a>
+      <a href=""><img src="images/panier.png" alt="Panier"></a>
+      <?php 
+      if (isset($_SESSION['acces'])) {
+        echo '<a href="Deconnexion.php" onClick ="actionDelete()"> <img src="images/deco.png"> </a>';
+      }
+      ?>
     </div>
   </nav>
 </header>
+
+<script>
+function actionDelete(){
+  if(confirm('Supprimer les cookies ?')){
+    <?php setcookie('cookIdent', "", time()-3600); ?>
+    alert('Cookies supprimés !');
+  }
+}
+</script>
