@@ -57,34 +57,114 @@ Projet est réalisé par::
 - https://github.com/Not-Yukii[Matthis Mabille]
 - https://github.com/Julien-D234[Julien Druelle]
 
-...
-
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[EP]
 
 == Réalisations 
 
 TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+
+=== Site-Web E-Commerce
+
+[cols="1,2,2",options=header]
+|===
+| Date    | Nom du document        |  Lien  
+| `16/12/2022` | Site Web "La Parure Française" | http://193.54.227.164/~SAESYS03/SAE/[Lien vers le site web]
+
+https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence]| 
+|===
+
+
+=== Choix du groupe client
+
+[cols="1,2,2",options=header]
+|===
+| Date    | Nom du document         |  Lien 
+| `07/11/2022` | Compte rendu du Speed Dating (choix du groupe client) | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/Compte_Rendu_SpeedDating_SAE_G1A3.pdf[Lien vers le compte rendu]  
+|===
+
+
+=== Documentations de notre Site Web E-commerce
+[cols="1,2,2",options=header]
 |===========================================================
 |Date  |Nom du document               |Lien
-|27/11/2022  |CDCT - Cahier des Charges Techniques | https://drive.google.com/file/d/1tzX-hxIqB4f2JjP3trM2WjycpnKBJdEh/view?usp=sharing
-|27/11/2022  |CDCF - Cahier des Charges Fonctionnel | https://drive.google.com/file/d/1M4B1Z7dC_SAalU-sPN2R8C80ARWDqsb6/view?usp=sharing
-|27/11/2022  |DCE - Dossier de consultation des entreprises | https://drive.google.com/file/d/1dln038ezZ7YIr4j_uOjS6hUnEGdOK6vd/view?usp=sharing
+|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20CDCT%20G1A-3.pdf[Lien vers le CDCT]
+|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20CDCF%20G1A-3.pdf[Lien vers le CDCF]
+|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOA/SAE-DevApp%20DCE%20G1A-3.pdf[Lien vers le DCE]
 |===========================================================
+
+=== Documentations du Site Web E-commerce client (G1B-5)
+[cols="1,2,2",options=header]
+|===========================================================
+|Date  |Nom du document               |Lien
+|`27/11/2022`  |CDCT - Cahier des Charges Techniques            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/CDCT%20G1B-5.pdf[Lien vers le CDCT Client]
+|`27/11/2022`  |CDCF - Cahier des Charges Fonctionnel | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/CDCF%20G1B-5.pdf[Lien vers le CDCF Client]
+|`27/11/2022`  |DCE - Dossier de consultation des entreprises | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20d'Offre%20MOE/DCE%20SAE%20G1B-5.pdf[Lien vers le DCE Client]
+|===========================================================
+
+=== Documentations des réalisations du Site Web E-commerce Client (G1B-5)
+[cols="1,2,2",options=header]
+|===========================================================
+|Date  |Nom du document               |Lien
+|`11/12/2022`  |SEP - Schéma d'enchainement des pages du site web client | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/SEP%20Site-Web%20G1A-3.png[Lien vers le SEP]
+|`11/12/2022`  |Charte graphique du site web client | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Charte%20Graphique%20G1A-3.pdf[Lien vers la Charte Graphique]
+|`16/12/2022`  |Documentations des *TESTS* du site-web | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Documentation%20Tests%20Site%20Web%20G1A-3.adoc[Lien vers la Documentation Test du site]
+|===========================================================
+
+=== Base de données V1
+
+[cols="1,2,2",options=header]
+|===
+| Date    | Nom du document        |  Lien
+| `11/12/2022` | Schéma relationnel de la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V1/Sch%C3%A9ma%20Relationnel%20G1A-3.pdf[Lien vers le schéma relationnel]
+| `11/12/2022` | Diagramme de classe de la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V1/Diagramme%20de%20Classe%20G1A-3.pdf[Lien vers le diagramme de classe]
+| `11/12/2022` | Dictionnaire des données de la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V1/Dictionnaire%20des%20donn%C3%A9es%20G1A-3.pdf[Lien vers le dictionnaire de données]
+|===
+
+=== Base de données V2
+
+[cols="1,2,2",options=header]
+|===
+| Date    | Nom du document        |  Lien
+| `11/12/2022` | Schéma relationnel de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Schema_relationnel_v2%20G1A-3.pdf[Lien vers le schéma relationnel V2]
+| `11/12/2022` | Diagramme de classe de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Diagramme%20de%20classe%20BD%20V2%20G1A-3.png[Lien vers le diagramme de classe V2]
+| `11/12/2022` | Dictionnaire des données de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Dictionnaire_des_donnees%20SAE%20DevApp%20V2%20G1A-3.png[Lien vers le dictionnaire de données V2]
+| `16/12/2022` | Script de création de la Base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Cr%C3%A9ation%20BD%20G1A-3.sql[Lien vers le script de création de la BD]
+| `16/12/2022` | Script d'insertion des données dans la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Insertion%20Donn%C3%A9es%20BD%20G1A-3.sql[Lien vers le script d'insertion des données]
+| `16/12/2022` | *TEST du fonctionnement de la BD* |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Tests-BD.sql[Lien vers les tests BD]
+|===
+
+=== Application PYTHON/JAVA
+
+[cols="1,2,2",options=header]
+|===
+| Date    | Nom du document         |  Lien
+| `11/12/2022` | Fichiers java du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Application/Java/SAE_principe_de_base_reader/SAE/src[Lien vers le code java]
+| `16/12/2022` | Fichier de configuration .ini | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20IOT-Python/Configuration.ini[Lien vers le fichier de configuration .ini]
+| `16/12/2022` | Fichier python du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20IOT-Python/PythonSAEG3.py[Lien vers le code python]
+
+
+|===
+
+=== Documentation PYTHON
+|===
+| Date    | Nom du document         |  Lien 
+| `16/12/2022` | Documentation technique python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Capteurs%20AM107%20Python%20G1A-3.pdf[Lien vers la documentation des capteurs AM107]
+| `16/12/2022` | Documentation installation python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Installation%20Python%20G1A-3.adoc[Lien vers la documentation d'installation Python]
+| `16/12/2022` | *Documentation TESTS python* | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Tests%20Python%20G1A-3.adoc[Lien vers la documentation des Tests Python]
+| `16/12/2022` | Documentation utilisateur python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Utilisateur%20Python%20G1A-3.adoc[Lien vers la documentation utilisateur Python]
+
+
+|===
 
 == Gestion de projet & Qualité
 
-Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
-Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.com/en/repositories/releasing-projects-on-github[Releases].
+=== Informations utiles
 
-De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
+- `Version` du projet : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v3.0.0[3.0.0] +
+- Lien vers les `user stories` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22+label%3A%22En+cours%22+[ici] +
+- Lien vers les `tâches` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3AT%C3%A2che+label%3A%22En+cours%22+[ici] +
+- Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/4[ici] +
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v3.0.0[v3.0.0]
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
-- Tests unitaires et plans de test
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
 
 === Évaluations hebdomadaires
 
