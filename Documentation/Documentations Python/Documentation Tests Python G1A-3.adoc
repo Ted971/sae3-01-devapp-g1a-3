@@ -1,0 +1,37 @@
+= Documentation des Tests G1A-3
+
+====
+* L'arborescence de l'application lors l'exécution :
+
+image::./imagesTests/Arborescence de l'application à l'exec.png[ImageArborescence]
+====
+
+====
+* Affichage sur le terminal lorsque certains valeurs d'un capteur dépassent les seuils maximaux
+
+image::./imagesTests/Autre exemple affichage terminal.png[ImageTerminal]
+
+* Affichage des logs des capteurs dépassant les seuils maximaux (triés par capteurs - par date de réception des données):
+
+image::./imagesTests/logSeuil.png[ImageSeuil]
+====
+
+====
+* Récupération des données du capteur AM107-2 et affichage à l'écran :
+
+image::./imagesTests/AffichageTerminal + Comparaison Exemple.png[ImageComparaison]
+
+* Le fichier du capteur AM107-2 après écriture des données :
+
+image::./imagesTests/exemple Ligne Fichier Capteurs.png[ImageFichCapteurs]
+====
+
+====
+* Affichage à l'écran des capteurs qui ne sont pas utilisés :
+
+image::./imagesTests/AffichageCapteursNonUtilisés.png[ImageNonUsedCapteurs]
+
+* Il est toujours possible de récupérer les valeurs des capteurs n'étant pas souhaités par l'utilisateur :
+
+image::./imagesTests/autreAffichage.png[ImageCapteursNonSoumis]
+====
