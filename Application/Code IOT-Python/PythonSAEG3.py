@@ -63,7 +63,8 @@ mqttc.on_message = get_data
 
 mqttc.loop_start()
 while True:
-    signal.alarm(int(parser.get('server','time'))*60)
+    "signal.alarm(int(parser.get('server','time'))*60)"
     sleep((int(parser.get('server','time'))*60)+1)
+    envoie()
     StockDico = dict()
     StockSeuil = []
