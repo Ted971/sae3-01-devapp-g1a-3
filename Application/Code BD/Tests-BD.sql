@@ -1,12 +1,12 @@
 -----------------------------------------------------------------------------
---       Tests sur les produits
+--       Tests sur les produits ----------------- **PASSED**
 -- -----------------------------------------------------------------------------
 
 -- 50 produits differents
 SELECT COUNT(*) FROM Produit;
 
 -- -----------------------------------------------------------------------------
---       Tests sur les clients
+--       Tests sur les clients ----------------- **PASSED**
 -- -----------------------------------------------------------------------------
 
 -- 50 clients en France
@@ -15,7 +15,7 @@ SELECT COUNT(*) FROM Client WHERE paysClient = 'France';
 SELECT COUNT(UNIQUE departementClient) FROM Client;
 
 -- -----------------------------------------------------------------------------
---       Tests sur les catégories
+--       Tests sur les catégories ----------------- **PASSED**
 -- -----------------------------------------------------------------------------
 
 -- 35 categorie/sous categorie
@@ -27,7 +27,7 @@ WHERE C.idCategorie = C2.idCategoriePere
 GROUP BY C.nomCategorie;
 
 -- -----------------------------------------------------------------------------
---       Tests sur les commandes
+--       Tests sur les commandes ----------------- **PASSED**
 -- -----------------------------------------------------------------------------
 
 -- 101 commande ont été faites
@@ -46,7 +46,7 @@ FROM Constituer
 WHERE qteCommandee>1;
 
 -- -----------------------------------------------------------------------------
---       Tests sur les paiements
+--       Tests sur les paiements ----------------- **PASSED**
 -- -----------------------------------------------------------------------------
 
 -- Le prix d'une commande peut être calculé
