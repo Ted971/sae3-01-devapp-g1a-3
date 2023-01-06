@@ -161,8 +161,8 @@ image::./images/connecmqtt.png[]
 =====
 image::./images/Capture d’écran du 2022-12-16 15-01-29.png[]
 
-* Le programme boucle à l'infini afin d'assurer la gestion de la fréquence d'écriture dans les fichiers capteurs. Pour ce faire, on crée une alarme _signal.alarm_ qui s'active toute les _x_ minutes selon la fréquence d'écriture paramétrée dans le fichier de configuration. Le programme dors ensuite en attendant que l'alarme soit déclenchée.
-* Après que l'intervalle de temps soit passé, on remet a zéro le dictionnaire _StockDico_)_ et la liste _StockSeuil_ afin que chaque valeur écrite dans les fichiers capteurs soit unique.
+* Le programme boucle à l'infini afin d'assurer la gestion de la fréquence d'écriture dans les fichiers capteurs. Pour ce faire, le programme utilise la fonction sleep() pour dormir _x_ minutes selon la fréquence d'écriture paramétrée dans le fichier de configuration.
+* Après que l'intervalle de temps soit passé, on remet a zéro le dictionnaire _StockDico_ et la liste _StockSeuil_ afin que chaque valeur écrite dans les fichiers capteurs soit unique.
 =====
 ====
 =================

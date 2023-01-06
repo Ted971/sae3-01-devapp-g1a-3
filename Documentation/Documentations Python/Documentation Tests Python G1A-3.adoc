@@ -1,4 +1,4 @@
-= Documentation des Tests G1A-3
+= Documentation des Tests Python G1A-3
 
 ====
 * L'arborescence de l'application lors l'exécution :
@@ -34,4 +34,9 @@ image::./imagesTests/AffichageCapteursNonUtilisés.png[ImageNonUsedCapteurs]
 * Il est toujours possible de récupérer les valeurs des capteurs n'étant pas souhaités par l'utilisateur :
 
 image::./imagesTests/autreAffichage.png[ImageCapteursNonSoumis]
+
 ====
+
+Conclusion :
+
+------ Le programme passent tous les tests inspirés des critères d'évaluation du programme ! ------
