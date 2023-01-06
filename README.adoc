@@ -68,7 +68,7 @@ TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre d�
 [cols="1,2,2",options=header]
 |===
 | Date    | Nom du document        |  Lien  
-| `16/12/2022` | Site Web "La Parure Française" | http://193.54.227.164/~SAESYS03/SAE/[Lien vers le site web]
+| `06/01/2023` | Site Web "La Parure Française" | http://193.54.227.164/~SAESYS03/SAE/Site-V2/[Lien vers le site web]
 
 https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence]| 
 |===
@@ -81,6 +81,13 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 | Date    | Nom du document         |  Lien 
 | `07/11/2022` | Compte rendu du Speed Dating (choix du groupe client) | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Appel%20Offre%20MOE/Compte_Rendu_SpeedDating_SAE_G1A3.pdf[Lien vers le compte rendu]  
 |===
+
+=== Réalisations Site Web E-Commerce
+[cols="1,2,2",options=header]
+|===========================================================
+|Date  |Nom du document               |Lien
+|`06/01/2023`  |Pages du Site Web "La Parure Française"            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers le dossier contenant les différentes pages du site]
+|===========================================================
 
 
 === Documentations de notre Site Web E-commerce
@@ -107,7 +114,7 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 |Date  |Nom du document               |Lien
 |`11/12/2022`  |SEP - Schéma d'enchainement des pages du site web client | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/SEP%20Site-Web%20G1A-3.png[Lien vers le SEP]
 |`11/12/2022`  |Charte graphique du site web client | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Charte%20Graphique%20G1A-3.pdf[Lien vers la Charte Graphique]
-|`16/12/2022`  |Documentations des *TESTS* du site-web | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Documentation%20Tests%20Site%20Web%20G1A-3.adoc[Lien vers la Documentation Test du site]
+|`06/01/2023`  |Documentations des *TESTS* du site-web | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Documentation%20Tests%20Site%20Web%20G1A-3.adoc[Lien vers la Documentation Test du site]
 |===========================================================
 
 === Base de données V1
@@ -125,12 +132,12 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 [cols="1,2,2",options=header]
 |===
 | Date    | Nom du document        |  Lien
-| `11/12/2022` | Schéma relationnel de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Schema_relationnel_v2%20G1A-3.pdf[Lien vers le schéma relationnel V2]
-| `11/12/2022` | Diagramme de classe de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Diagramme%20de%20classe%20BD%20V2%20G1A-3.png[Lien vers le diagramme de classe V2]
-| `11/12/2022` | Dictionnaire des données de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Dictionnaire_des_donnees%20SAE%20DevApp%20V2%20G1A-3.png[Lien vers le dictionnaire de données V2]
-| `16/12/2022` | Script de création de la Base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Cr%C3%A9ation%20BD%20G1A-3.sql[Lien vers le script de création de la BD]
-| `16/12/2022` | Script d'insertion des données dans la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Insertion%20Donn%C3%A9es%20BD%20G1A-3.sql[Lien vers le script d'insertion des données]
-| `16/12/2022` | *TEST du fonctionnement de la BD* |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Tests-BD.sql[Lien vers les tests BD]
+| `19/12/2022` | Schéma relationnel de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Schema_relationnel_v2%20G1A-3.pdf[Lien vers le schéma relationnel V2]
+| `19/12/2022` | Diagramme de classe de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Diagramme%20de%20classe%20BD%20V2%20G1A-3.png[Lien vers le diagramme de classe V2]
+| `19/12/2022` | Dictionnaire des données de la base de données V2 |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20BD/V2/Dictionnaire_des_donnees%20SAE%20DevApp%20V2%20G1A-3.png[Lien vers le dictionnaire de données V2]
+| `06/01/2023` | Script de création de la Base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Cr%C3%A9ation%20BD%20G1A-3.sql[Lien vers le script de création de la BD]
+| `06/01/2022` | Script d'insertion des données dans la base de données |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Script%20Insertion%20Donn%C3%A9es%20BD%20G1A-3.sql[Lien vers le script d'insertion des données]
+| `06/01/2022` | *TEST du fonctionnement de la BD* |  https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20BD/Tests-BD.sql[Lien vers les tests BD]
 |===
 
 === Application PYTHON/JAVA
@@ -138,9 +145,9 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 [cols="1,2,2",options=header]
 |===
 | Date    | Nom du document         |  Lien
-| `11/12/2022` | Fichiers java du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Application/Java/SAE_principe_de_base_reader/SAE/src[Lien vers le code java]
+| `06/01/2023` | Fichiers java du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Application/Java/Application[Lien vers le code java]
 | `16/12/2022` | Fichier de configuration .ini | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20IOT-Python/Configuration.ini[Lien vers le fichier de configuration .ini]
-| `16/12/2022` | Fichier python du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20IOT-Python/PythonSAEG3.py[Lien vers le code python]
+| `06/01/2023` | Fichier python du projet | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application/Code%20IOT-Python/PythonSAEG3.py[Lien vers le code python]
 
 
 |===
@@ -150,8 +157,8 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 | Date    | Nom du document         |  Lien 
 | `16/12/2022` | Documentation technique python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Capteurs%20AM107%20Python%20G1A-3.pdf[Lien vers la documentation des capteurs AM107]
 | `16/12/2022` | Documentation installation python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Installation%20Python%20G1A-3.adoc[Lien vers la documentation d'installation Python]
-| `16/12/2022` | *Documentation TESTS python* | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Tests%20Python%20G1A-3.adoc[Lien vers la documentation des Tests Python]
-| `16/12/2022` | Documentation utilisateur python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Utilisateur%20Python%20G1A-3.adoc[Lien vers la documentation utilisateur Python]
+| `06/01/2022` | *Documentation TESTS python* | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Tests%20Python%20G1A-3.adoc[Lien vers la documentation des Tests Python]
+| `06/01/2022` | Documentation utilisateur python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Utilisateur%20Python%20G1A-3.adoc[Lien vers la documentation utilisateur Python]
 
 
 |===
@@ -160,7 +167,7 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 
 === Informations utiles
 
-- `Version` du projet : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v4.0.0[3.0.0] +
+- `Version` du projet : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v5.0.0[5.0.0] +
 - Lien vers les `user stories` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22+label%3A%22En+cours%22+[ici] +
 - Lien vers les `tâches` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3AT%C3%A2che+label%3A%22En+cours%22+[ici] +
 - Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/4[ici] +
