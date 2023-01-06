@@ -6,8 +6,47 @@ DROP TABLE PRODUIT CASCADE CONSTRAINTS;
 DROP TABLE FORMULAIRE CASCADE CONSTRAINTS;
 DROP TABLE CATEGORIE CASCADE CONSTRAINTS;
 DROP TABLE CONSTITUER CASCADE CONSTRAINTS;
-DROP TABLE STOCKER CASCADE CONSTRAINTS;
+DROP TABLE CARACTERISTIQUES CASCADE CONSTRAINTS;
 DROP TABLE ADRESSE CASCADE CONSTRAINTS;
+DROP TABLE PANIER CASCADE CONSTRAINTS;
+
+-- -- -----------------------------------------------------------------------------
+-- --       FONCTION : GET_GENRE
+-- -- -----------------------------------------------------------------------------
+
+-- CREATE FUNCTION dbo.Get_genre(id_prod: int)
+-- RETURNS VARCHAR(3)
+-- AS BEGIN
+--    RETURN (SELECT C.genreCategorie FROM CATEGORIE AS C, PRODUIT AS P WHERE C.idCategorie = P.idCategorie AND id_prod = P.idProduit)
+-- END
+
+-- -----------------------------------------------------------------------------
+--       TABLE : PRODUIT
+-- -----------------------------------------------------------------------------
+
+CREATE TABLE PRODUIT
+   (
+    idProduit NUMBER(8),
+    idCategorie NUMBER(8),
+    nomProduit VARCHAR(64),
+    CONSTRAINT pk_produit PRIMARY KEY (idProduit),
+    CONSTRAINT ck_prod_cat CHECK (idCategorie>=6)  
+   ) ;
+
+
+-- -----------------------------------------------------------------------------
+--       TABLE : CATEGORIE
+-- -----------------------------------------------------------------------------
+
+CREATE TABLE CATEGORIE
+   (
+    idCategorie NUMBER(8),
+    idCategoriePere NUMBER(8),
+    nomCategorie VARCHAR(128),
+    genreCategorie VARCHAR(3),
+    CONSTRAINT pk_categorie PRIMARY KEY (idCategorie),
+    CONSTRAINT ck_categorie_genre CHECK (genreCategorie IN ('H','F','H/F'))
+   ) ;
 
 -- -----------------------------------------------------------------------------
 --       TABLE : DETAILPRODUIT
@@ -17,16 +56,66 @@ CREATE TABLE DETAILPRODUIT
    (
     idDetailProduit NUMBER(8),
     idProduit NUMBER(8),
-    colorisProduit VARCHAR(128),
-    tailleProduit VARCHAR(128),
     matiereProduit VARCHAR(128),
     descriptionProduit VARCHAR(128),
+    genreProduit VARCHAR(3),
     prixProduit NUMBER(8,2),
     CONSTRAINT pk_detailProduit PRIMARY KEY (idDetailProduit),
-    CONSTRAINT ck_detailProduit_taille CHECK (tailleProduit IN ('S','M','L','XL','2XL', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50')),
-    CONSTRAINT ck_detailProduit_matiere CHECK (matiereProduit IN ('Coton','Cuire','Laine')),
+    CONSTRAINT ck_detailProduit_matiere CHECK (matiereProduit IN ('Coton','Cuir','Elasthane et Coton','Elasthane', 'Nylon', 'Lyocell','Molleton','Argent','Caoutchouc','Polyamide','Tissu Stretch','Soie','Polyesther')),
+    CONSTRAINT ck_detailProduit_genre CHECK (genreProduit IN ('H','F','H/F')),
     CONSTRAINT ck_detailProduit_prix CHECK (prixProduit >=0)
    ) ;
+
+-- CREATE OR REPLACE VIEW v_CheckGenre
+-- AS
+-- SELECT C.genreCategorie AS genreCategorie, D.genreProduit AS genreProduit, D.idProduit AS idProduit
+-- FROM CATEGORIE C, PRODUIT P, DetailProduit D 
+-- WHERE C.idCategorie = P.idCategorie AND D.idProduit = P.idProduit AND C.genreCategorie NOT LIKE '%' || genreProduit || '%'
+-- WITH CHECK OPTION;
+
+CREATE OR REPLACE TRIGGER t_i_b_blabla 
+AFTER INSERT OR UPDATE
+ON DETAILPRODUIT
+DECLARE
+vIdProduit DETAILPRODUIT.idProduit%TYPE;
+v_var int;
+BEGIN
+  SELECT COUNT(*) INTO v_var
+      FROM CATEGORIE C, PRODUIT P, DetailProduit D 
+      WHERE C.idCategorie = P.idCategorie AND D.idProduit = P.idProduit AND C.genreCategorie NOT LIKE '%' || genreProduit || '%';
+   IF (v_var > 0)
+   THEN
+      DELETE FROM DetailProduit WHERE idProduit = vIdProduit;
+      RAISE_APPLICATION_ERROR(-20000, 'Le genre du produit est incompatible avec le genre de la categorie');
+   END IF;
+END;
+/
+
+-- CREATE OR REPLACE TRIGGER t_iu_i_blablav2
+-- INSTEAD OF DELETE
+-- ON v_CheckGenre
+-- BEGIN
+--       RAISE_APPLICATION_ERROR(-20000, 'Le genre du produit est incompatible avec le genre de la categorie');
+-- END;
+-- /
+
+-- -----------------------------------------------------------------------------
+--       TABLE : PANIER
+-- -----------------------------------------------------------------------------
+
+CREATE TABLE PANIER
+   (
+    idPanier VARCHAR(32),
+    idDetailProduit NUMBER(8),
+    nomProduit VARCHAR(64),
+    descriptionProduit VARCHAR(128),
+    tailleProduit VARCHAR(128),
+    colorisProduit VARCHAR(128), 
+    prixProduit NUMBER(8,2),
+    qtePanier NUMBER(5),
+    CONSTRAINT ck_panier_qtePanier CHECK (qtePanier>=1)
+   ) ;
+
 
 -- -----------------------------------------------------------------------------
 --       TABLE : PAIEMENT
@@ -58,18 +147,6 @@ CREATE TABLE COMMANDE
    ) ;
 
 -- -----------------------------------------------------------------------------
---       TABLE : PRODUIT
--- -----------------------------------------------------------------------------
-
-CREATE TABLE PRODUIT
-   (
-    idProduit NUMBER(8),
-    idCategorie NUMBER(8),
-    nomProduit VARCHAR(64),
-    CONSTRAINT pk_produit PRIMARY KEY (idProduit)  
-   ) ;
-
--- -----------------------------------------------------------------------------
 --       TABLE : FORMULAIRE
 -- -----------------------------------------------------------------------------
 
@@ -82,19 +159,6 @@ CREATE TABLE FORMULAIRE
     CONSTRAINT pk_formulaire PRIMARY KEY (idFormulaire)  
    ) ;
 
--- -----------------------------------------------------------------------------
---       TABLE : CATEGORIE
--- -----------------------------------------------------------------------------
-
-CREATE TABLE CATEGORIE
-   (
-    idCategorie NUMBER(8),
-    idCategoriePere NUMBER(8),
-    nomCategorie VARCHAR(128),
-    genreCategorie VARCHAR(3),
-    CONSTRAINT pk_categorie PRIMARY KEY (idCategorie),
-    CONSTRAINT ck_categorie_genre CHECK (genreCategorie IN ('H','F','H/F'))
-   ) ;
 
 -- -----------------------------------------------------------------------------
 --       TABLE : CLIENT
@@ -111,9 +175,12 @@ CREATE TABLE CLIENT
     paysClient VARCHAR(32),
     departementClient NUMBER(3),
     passwordClient VARCHAR(64),
+    roleClient VARCHAR(32),
     CONSTRAINT pk_Client PRIMARY KEY (idClient),
     CONSTRAINT uk_Client_mail UNIQUE (mailClient),
-    CONSTRAINT ck_Client_pays CHECK (paysClient IN ('France','Angleterre','Espagne'))
+    CONSTRAINT uk_Client_pseudo UNIQUE (pseudoClient),
+    CONSTRAINT ck_Client_pays CHECK (paysClient IN ('France','Belgique','Espagne')),
+    CONSTRAINT ck_Client_role CHECK (roleClient IN ('Admin','Client'))
    ) ;
 
 -- -----------------------------------------------------------------------------
@@ -124,22 +191,23 @@ CREATE TABLE CONSTITUER
    (
     idCommande NUMBER(8),
     idProduit NUMBER(8),
-    qteCommandee NUMBER(4),
+    qteCommandee NUMBER(5),
     CONSTRAINT pk_constituer PRIMARY KEY (idCommande, idProduit),
     CONSTRAINT ck_constituer_qteCommandee CHECK (qteCommandee>=1)
    ) ;
 
 -- -----------------------------------------------------------------------------
---       TABLE : STOCKER
+--       TABLE : CARACTERISTIQUES
 -- -----------------------------------------------------------------------------
 
-CREATE TABLE STOCKER
+CREATE TABLE CARACTERISTIQUES
    (
-    idProduit NUMBER(8),
     idDetailProduit NUMBER(8),
-    qteStockee NUMBER(4),
-    CONSTRAINT pk_stocker PRIMARY KEY (idProduit, idDetailProduit),
-    CONSTRAINT ck_constituer_qteStockee CHECK (qteStockee>=0)
+    colorisProduit VARCHAR(128),
+    tailleProduit VARCHAR(128),
+    qteStockee NUMBER(5),
+    CONSTRAINT ck_caracteristiques_taille CHECK (tailleProduit IN ('S','M','L','XL','2XL','TU','85-A','85-B','85-C','85-D','90-A','90-B','90-C','90-D','95-A','95-B','95-C','95-D', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50')),
+    CONSTRAINT ck_caracteristiques_color CHECK (colorisProduit IN ('Noir','Vert','Rouge','Violet','Blanc', 'Bleu', 'Marine', 'Jaune', 'Orange', 'Rose', 'TartanMarine'))
    ) ;
    
    
@@ -180,11 +248,8 @@ ADD CONSTRAINT fk_constituer_idCommande FOREIGN KEY (idCommande) REFERENCES COMM
 ALTER TABLE CONSTITUER 
 ADD CONSTRAINT fk_constituer_idProduit FOREIGN KEY (idProduit) REFERENCES PRODUIT (idProduit);
 
-ALTER TABLE STOCKER 
-ADD CONSTRAINT fk_stocker_idProduit FOREIGN KEY (idProduit) REFERENCES PRODUIT (idProduit);
-
-ALTER TABLE STOCKER 
-ADD CONSTRAINT fk_stocker_idDetailProduit FOREIGN KEY (idDetailProduit) REFERENCES DETAILPRODUIT (idDetailProduit);
+ALTER TABLE CARACTERISTIQUES 
+ADD CONSTRAINT fk_carac_idDetailProduit FOREIGN KEY (idDetailProduit) REFERENCES DETAILPRODUIT (idDetailProduit);
 
 ALTER TABLE FORMULAIRE
 ADD CONSTRAINT fk_formulaire_idClient FOREIGN KEY (idClient) REFERENCES Client (idClient);
@@ -194,45 +259,6 @@ ADD CONSTRAINT fk_adresse_idClient FOREIGN KEY (idClient) REFERENCES Client (idC
 
 ALTER TABLE ADRESSE
 ADD CONSTRAINT fk_adresse_idCommande FOREIGN KEY (idCommande) REFERENCES COMMANDE (idCommande);
-
--- -----------------------------------------------------------------------------
---       CREATION DES SEQUENCES
--- -----------------------------------------------------------------------------
-
-DROP SEQUENCE seq_categorie;
-CREATE SEQUENCE seq_categorie
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_produit;
-CREATE SEQUENCE seq_produit
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_Client;
-CREATE SEQUENCE seq_Client
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_detailP;
-CREATE SEQUENCE seq_detailP
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_paiement;
-CREATE SEQUENCE seq_paiement
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_commande;
-CREATE SEQUENCE seq_commande
-START WITH 1
-INCREMENT BY 1;
-
-DROP SEQUENCE seq_formulaire;
-CREATE SEQUENCE seq_formulaire
-START WITH 1
-INCREMENT BY 1;
 
 -- -----------------------------------------------------------------------------
 --       VALIDATION DE LA CREATION
