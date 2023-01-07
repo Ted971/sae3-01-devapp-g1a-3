@@ -1,5 +1,8 @@
 = Documentation des Tests Web G1A-3
 
+-------
+Tous les tests présents dans ce documents présentent des fonctionnalités finalisés !
+-------
 
 ====
 Cette documentation montre le fonctionnement de la page de connexion / création de compte du site "La Parure Française" à travers différents tests : 
