@@ -1,0 +1,42 @@
+.result {
+    display: inline-flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 1;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.resultDiv {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: bold;
+}
+
+.resultImg {
+    display: flex;
+    max-width: 20%;
+    border: 1px solid;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.productAlign {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+@media (max-width:1000px) {
+    .productAlign {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+}

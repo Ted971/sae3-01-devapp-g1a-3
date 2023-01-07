@@ -1,31 +1,32 @@
-<?php session_start() ?>
+<?php session_start() ;
+include("connect.inc.php");?>
 <header>
-  <nav>
-    <div id="logo">
-      <img src="images/LogoParure.png" alt="Logo de notre entreprise">
-    </div>
+  <nav class="header_nav">
+    
+    <img class="logo" src="images/LogoParure.png" alt="Logo de notre entreprise"/>
+
     <ul>
-      <li class="" style = "list-style-type: none;">
-        <a href="" class="Header__nav__link--hasSubmenuv2"> 
-            <span data-text="Entreprise">Notre entreprise</span> 
+      <li style = "list-style-type: none;">
+        <a href="Entreprise.php" class="Header__nav__link--hasSubmenuv2"> 
+            <span class="padded-element" data-text="Entreprise">Notre entreprise</span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
             <div class="Header__nav__submenu__blockv2">
               <ul>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu">
+                  <a href="Entreprise.php#a_propos" class="Header__nav__link--hasSubmenu">
                     <span> À propos de nous </span> 
                   </a>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu">
-                    <span> Notre histoire </span> 
+                  <a href="Entreprise.php#histoire" class="Header__nav__link--hasSubmenu">
+                    <span> Notre histoire</span> 
                   </a>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu">
-                    <span> Notre équipe </span>
+                  <a href="Entreprise.php#equipe" class="Header__nav__link--hasSubmenu">
+                    <span> Notre équipe</span>
                   </a>
                 </li>
               </ul>
@@ -33,371 +34,93 @@
           </div>
         </div>
       </li>
-      <li class=""> 
-        <a href="" class="Header__nav__link--hasSubmenuv2">  
-          <span data-text="Masculin"> Masculin</span> 
+      <li class="header_marker"> 
+      <li class="">
+      <a href="ConsultMainCategorie.php?genre=H" class="Header__nav__link--hasSubmenuv2">  
+          <span class="padded-element" data-text="Masculin"> Masculin</span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
             <div class="Header__nav__submenu__block">
               <ul>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="ConsultCategorie.php?nomCateg=Sous-vetements" class="Header__nav__link--hasSubmenu"> 
-                    <span>Sous-vêtements</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Boxers
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Slips
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Caleçons
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Sous-vêtements de sport
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="ConsultCategorie.php?nomCateg=Pyjamas" class="Header__nav__link--hasSubmenu"> 
-                    <span>Pyjamas</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Hauts de pyjama
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Bas de pyjama
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs de pyjamas
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="ConsultCategorie.php?nomCateg=Vetements" class="Header__nav__link--hasSubmenu"> 
-                    <span>Vêtements</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class="">
-                          <a href="" class="Header__nav__link"> 
-                            T-Shirts et polos
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Pulls
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Sweat-Shirts
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Joggings
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Pantalons
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Shorts et bermudas
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Chemises
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Accessoires
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="ConsultCategorie.php?nomCateg=Chaussants" class="Header__nav__link--hasSubmenu"> 
-                    <span>Chaussants</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Chaussons
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Charentaises
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Chaussettes
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Espadrilles
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs de chaussettes
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="ConsultCategorie.php?nomCateg=Maillots de bain" class="Header__nav__link--hasSubmenu"> 
-                    <span>Maillots de Bain</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Shorts de bain
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Boxers de bain
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Slips de bain
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
+                <?php
+                $req = "SELECT nomCategorie, genreCategorie FROM Categorie WHERE idCategorie < 6";
+                $lesCategories = oci_parse($connect, $req);
+                $result = oci_execute($lesCategories);
+                while (($categ = oci_fetch_assoc($lesCategories)) != false) {
+                  if ($categ['NOMCATEGORIE'] == 'Sous-vetements') {
+                    $nomCategorie = 'Sous-vêtements';
+                  } else if ($categ['NOMCATEGORIE'] == 'Vetements') {
+                    $nomCategorie = 'Vêtements';
+                  } else {
+                    $nomCategorie = $categ['NOMCATEGORIE'];
+                  }
+                  echo '<li class=""> <button class="toggle__submenus" aria-expanded="false"></button>';
+                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link--hasSubmenu"><span>' . $nomCategorie . '</span></a>';
+                  echo '<div class="Header__nav__submenu">';
+                  $req2 = "SELECT C2.nomCategorie, C2.genreCategorie FROM Categorie C, Categorie C2 WHERE C.idCategorie = C2.idCategoriePere AND C.nomCategorie = :pCategorie AND C2.genreCategorie IN ('H', 'H/F')";
+                  $lesSousCategories = oci_parse($connect, $req2);
+                  oci_bind_by_name($lesSousCategories, ":pCategorie", $categ['NOMCATEGORIE']);
+                  $result = oci_execute($lesSousCategories);
+                  echo '<div class="Header__nav__submenu__categories">';
+                  echo '<ul>';
+                  while (($souscateg = oci_fetch_assoc($lesSousCategories)) != false) {
+                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
+                  }
+                  oci_free_statement($lesSousCategories);
+                  echo '</ul></div>';
+                  echo '</div></li>';
+                }
+                oci_free_statement($lesCategories);
+                ?>
               </ul>
             </div>
           </div>
-        </div>
+          </div>
       </li>
-      <li class=""> 
-        <a href="" class="Header__nav__link--hasSubmenuv2">  
+      <li class="header_marker"> 
+      <li class="">
+      <a href="ConsultMainCategorie.php?genre=F" class="Header__nav__link--hasSubmenuv2">  
           <span data-text="Féminin"> Féminin</span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
             <div class="Header__nav__submenu__block">
               <ul>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
-                    <span>Sous-vêtements</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Soutiens-gorge
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Culotte et bas
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Ensemble de lingerie
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Culotte menstruelle
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Bodys
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
-                    <span>Pyjamas</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Hauts de pyjama
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Bas de pyjama
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Nuisettes
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs de pyjamas
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
-                    <span>Vêtements</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            T-Shirts et chemises
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Pulls
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Sweat-Shirts
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Joggings, pantalons et shorts
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Accessoires
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
-                    <span>Chaussants</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Charentaises
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Chaussons
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Chaussettes
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Collants
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Espadrilles
-                          </a>
-                        </li>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link"> 
-                            Packs de chaussettes 
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
-                  <a href="" class="Header__nav__link--hasSubmenu"> 
-                    <span>Maillots de Bain</span>
-                  </a>
-                  <div class="Header__nav__submenu">
-                    <div class="Header__nav__submenu__categories">
-                      <ul>
-                        <li class=""> 
-                          <a href="" class="Header__nav__link">
-                            Maillots une pièce 
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
+                <?php
+                $req = "SELECT * FROM Categorie WHERE idCategorie < 6";
+                $lesCategories = oci_parse($connect, $req);
+                $result = oci_execute($lesCategories);
+                while (($categ = oci_fetch_assoc($lesCategories)) != false) {
+                  if ($categ['NOMCATEGORIE'] == 'Sous-vetements') {
+                    $nomCategorie = 'Sous-vêtements';
+                  } else if ($categ['NOMCATEGORIE'] == 'Vetements') {
+                    $nomCategorie = 'Vêtements';
+                  } else {
+                    $nomCategorie = $categ['NOMCATEGORIE'];
+                  }
+                  echo '<li class=""> <button class="toggle__submenus" aria-expanded="false"></button>';
+                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link--hasSubmenu"><span>' . $nomCategorie . '</span></a>';
+                  echo '<div class="Header__nav__submenu">';
+                  $req2 = "SELECT C2.nomCategorie, C2.genreCategorie FROM Categorie C, Categorie C2 WHERE C.idCategorie = C2.idCategoriePere AND C.nomCategorie = :pCategorie AND C2.genreCategorie IN ('F', 'H/F')";
+                  $lesSousCategories = oci_parse($connect, $req2);
+                  oci_bind_by_name($lesSousCategories, ":pCategorie", $categ['NOMCATEGORIE']);
+                  $result = oci_execute($lesSousCategories);
+                  echo '<div class="Header__nav__submenu__categories">';
+                  echo '<ul>';
+                  while (($souscateg = oci_fetch_assoc($lesSousCategories)) != false) {
+                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
+                  }
+                  oci_free_statement($lesSousCategories);
+                  echo '</ul></div>';
+                  echo '</div></li>';
+                }
+                oci_free_statement($lesCategories);
+                ?>
               </ul>
             </div>
           </div>
-        </div>
+          </div>
       </li>
     </ul>
     <div id="headerSearch" class="Header__search">
@@ -410,8 +133,8 @@
     </div>
     <div id="images">
       <a href="index.php"><img src="images/maison.png" alt="Accueil"></a>
-      <a href="FormConnexion.php"><img src="images/compte.png" alt="Compte"></a>
-      <a href=""><img src="images/panier.png" alt="Panier"></a>
+      <a href="FormConnexion.php" title="Voir mon compte client"><img src="images/compte.png" alt="Compte"></a>
+      <a href="Panier.php"><img src="images/panier.png" alt="Panier"></a>
       <?php 
       if (isset($_SESSION['acces'])) {
         echo '<a href="Deconnexion.php" onClick ="actionDelete()"> <img src="images/deco.png"> </a>';

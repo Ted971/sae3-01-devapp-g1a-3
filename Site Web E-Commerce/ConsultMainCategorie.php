@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>La Parure Française - Les sous-catégories</title>
+    <title>La Parure Française - Les catégories</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="include/style.css">
@@ -18,12 +18,10 @@
 
     <?php
     include("connect.inc.php");
-    $req = "SELECT C2.nomCategorie, C2.idCategorie FROM Categorie C, Categorie C2 WHERE C.idCategorie = C2.idCategoriePere AND C.nomCategorie = :pCategorie AND C2.genreCategorie LIKE :gCategorie";
+    $req = "SELECT C.nomCategorie FROM Categorie C WHERE C.idCategoriePere IS NULL AND C.genreCategorie LIKE :gCategorie";
     $lesCategories = oci_parse($connect, $req);
-    $category = htmlentities($_GET['nomCateg']);
-    $genre = htmlentities($_GET['genre']);
+    $genre = $_GET['genre'];
     $genre_query = "%".$genre."%";
-    oci_bind_by_name($lesCategories, ":pCategorie", $category);
     oci_bind_by_name($lesCategories, ":gCategorie", $genre_query);
     $result = oci_execute($lesCategories);
     if (!$result) {
@@ -31,11 +29,12 @@
         print htmlentities($e['message'] . ' pour cette requete : ' . $e['sqltext']);
     }
     include_once("./functions/displayCategorie.php");
-    echo "<H1> ". replace_accents($category)." : sous-catégories</H1>";
+    $full_genre = $genre == "H" ? "Homme" : "Femme";
+    echo "<H1> Catégories d'habits pour ". $full_genre ." </H1>";
     while (($categ = oci_fetch_assoc($lesCategories)) != false) {
         // echo $categ['NOMCATEGORIE'];
         // echo "<br/>";
-        display_cat_sub($categ['NOMCATEGORIE'], $categ['IDCATEGORIE'], $genre);
+        display_cat_main($categ['NOMCATEGORIE'], $genre);
     }
     oci_free_statement($lesCategories);
     ?>

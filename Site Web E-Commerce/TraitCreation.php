@@ -2,9 +2,9 @@
 	require_once("connect.inc.php");
 	error_reporting(0);
 
-    if (isset($_POST['Valider']) && ($_POST['username'] != "") && ($_POST['password'] != "") && ($_POST['last_name'] != "") && ($_POST['first_name'] != "") && ($_POST['mail'] != "") /* && isset($_POST['date_naiss']) */ && ($_POST['departement'] != "")) {
+    if (isset($_POST['Valider']) && ($_POST['username'] != "") && ($_POST['password'] != "") && ($_POST['last_name'] != "") && ($_POST['first_name'] != "") && ($_POST['mail'] != "") && ($_POST['date_naiss'] != "") && ($_POST['departement'] != "")) {
 		// on crée une autre variable pour la définition d'une requête paramétrée d'insertion
-		$req3 = "INSERT INTO Client (idClient, pseudoClient, nomClient, prenomClient, mailClient, dteNaissanceClient, paysClient, departementClient, passwordClient) VALUES(seq_Client.NEXTVAL,:psC, :nomC, :preC, :mailC, :naisC, :counC, :depC, :passC)";						 
+		$req3 = "INSERT INTO Client (idClient, pseudoClient, nomClient, prenomClient, mailClient, dteNaissanceClient, paysClient, departementClient, passwordClient, roleClient) VALUES(seq_Client.NEXTVAL,:psC, :nomC, :preC, :mailC, :naisC, :counC, :depC, :passC, :roC)";						 
 		// on prépare la requête paramétrée
 		$insertClient = oci_parse($connect, $req3);
 		// on associe les valeurs aux paramètres de la requête via des variables (sinon ça marche pas !)
@@ -16,6 +16,10 @@
 		$paysClient = htmlentities($_POST['country']);
 		$depClient = htmlentities($_POST['departement']);
 		$mdpClient = htmlentities($_POST['password']);
+		$roleClient = 'Client';
+
+		$dteNaissanceClient = strtotime($dteNaissanceClient);
+		$dteNaissanceClient = strtoupper(date("j/M/Y", $dteNaissanceClient));
 
 		echo $pseudoClient; echo "</br>";
 		echo $nomClient; echo "</br>";
@@ -37,6 +41,7 @@
 		oci_bind_by_name($insertClient, ":counC", $paysClient);
 		oci_bind_by_name($insertClient, ":depC", $depClient);
 		oci_bind_by_name($insertClient, ":passC", $hashMDP);
+		oci_bind_by_name($insertClient, ":roC", $roleClient);
 
 		// on execute la requete
 		$result = oci_execute($insertClient);
@@ -51,7 +56,7 @@
 
 		// Libère toutes les ressources réservées par un résultat Oracle
 		oci_free_statement($insertClient);
-		header('location: index.php');
+		header('location: FormConnexion.php');
 		exit();
 	} else {
         header('location: FormConnexion.php?msgErreur=Tous les champs n\'ont pas été remplis correctement');
