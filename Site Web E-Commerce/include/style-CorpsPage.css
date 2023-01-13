@@ -16,3 +16,16 @@ hr{
  height: 2px;
  width: 25%;
 }
+
+.formulaire{
+	border: solid;
+	border-color: #2E4057;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.contentForm{
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: left;
+}

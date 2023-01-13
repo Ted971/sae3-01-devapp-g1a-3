@@ -19,7 +19,51 @@
 
     <?php
     include("connect.inc.php");
+
+    $tri = array("tri par prix croissant",
+                "tri par prix décroissant",
+                "A-Z",
+                "Z-A"
+            );
+    echo "<form action = 'ConsultProduct.php?nomSousCateg=".$_GET['nomSousCateg']."&genre=".$_GET['genre']."' method = 'POST'>";
+    echo "<select name='tri' onchange='this.form.submit()'>
+    <option disabled selected value> -- Tri -- </option>";
+      if (isset($_POST['tri'])){
+        for($i=0; $i<4; $i++){
+            if($tri[$i] != $_POST['tri']){
+                echo "<option>$tri[$i]</option>";
+            } else {
+                echo "<option value='" . $_POST['tri'] . "' selected='selected'>" . $_POST['tri'] . "</option>";
+            }
+        }
+	}else{
+        echo "<option>tri par prix croissant</option>";
+        echo "<option>tri par prix décroissant</option>";
+        echo "<option>A-Z</option>";
+        echo "<option>Z-A</option>";
+    }
+    echo "</select>";
+    echo "<noscript><input type='submit' value='Submit'></noscript>";
+    echo "</form>";
+
     $req = "SELECT P.nomProduit, P.idProduit, D.prixProduit FROM Categorie C, Produit P, DetailProduit D WHERE C.nomCategorie = :pCategorie AND P.idCategorie = C.idCategorie AND D.idProduit = P.idProduit AND D.genreProduit LIKE :gCategorie";
+    if (isset($_POST['tri'])){
+        if($_POST['tri'] == "tri par prix croissant"){
+            $req = "SELECT P.nomProduit, P.idProduit, D.prixProduit FROM Categorie C, Produit P, DetailProduit D WHERE C.nomCategorie = :pCategorie AND P.idCategorie = C.idCategorie AND D.idProduit = P.idProduit AND D.genreProduit LIKE :gCategorie ORDER BY prixProduit ASC";
+        }
+
+         if($_POST['tri'] == "tri par prix décroissant"){
+            $req = "SELECT P.nomProduit, P.idProduit, D.prixProduit FROM Categorie C, Produit P, DetailProduit D WHERE C.nomCategorie = :pCategorie AND P.idCategorie = C.idCategorie AND D.idProduit = P.idProduit AND D.genreProduit LIKE :gCategorie ORDER BY prixProduit DESC";
+        }
+
+        if($_POST['tri'] == "A-Z"){
+            $req = "SELECT P.nomProduit, P.idProduit, D.prixProduit FROM Categorie C, Produit P, DetailProduit D WHERE C.nomCategorie = :pCategorie AND P.idCategorie = C.idCategorie AND D.idProduit = P.idProduit AND D.genreProduit LIKE :gCategorie ORDER BY nomProduit ASC";
+        }
+
+        if($_POST['tri'] == "Z-A"){
+            $req = "SELECT P.nomProduit, P.idProduit, D.prixProduit FROM Categorie C, Produit P, DetailProduit D WHERE C.nomCategorie = :pCategorie AND P.idCategorie = C.idCategorie AND D.idProduit = P.idProduit AND D.genreProduit LIKE :gCategorie ORDER BY nomProduit DESC";
+        }
+    }
     $lesProduits = oci_parse($connect, $req);
     $category = htmlentities($_GET['nomSousCateg']);
     $genre = htmlentities($_GET['genre']);

@@ -113,7 +113,12 @@
             }
             echo "</div>";
         }
-        echo "</br></br> Total du panier : ". $TotalPanier."€";
+        echo "</br> Sous-Total du panier : ". $TotalPanier."€ </br> </br> " ;
+        echo "<form id='form' action='recapitulatifCommande.php' method='post'>";
+        echo "<div> </br>";
+        echo "<button onclick='this.form.submit()'>Voir ma commande</button> </br>";
+        echo "</div>";
+        echo "</form>";
     } else {
         echo "Votre panier est vide !";
     }

@@ -124,7 +124,7 @@ include("connect.inc.php");?>
       </li>
     </ul>
     <div id="headerSearch" class="Header__search">
-        <form action="" method="get" role="search" class="SearchBox">
+        <form action="traitRecherche.php" method="get" role="search" class="SearchBox">
           <input type="search" placeholder="Recherche" required="" name="recherche" autocomplete="off" value=""> 
           <button type="submit" title="Rechercher">
             <img src="images/loupe.png" alt="recherche" width="15" height="14">
@@ -134,21 +134,35 @@ include("connect.inc.php");?>
     <div id="images">
       <a href="index.php"><img src="images/maison.png" alt="Accueil"></a>
       <a href="FormConnexion.php" title="Voir mon compte client"><img src="images/compte.png" alt="Compte"></a>
+      <div class='panier1'> 
       <a href="Panier.php"><img src="images/panier.png" alt="Panier"></a>
+      <span class="cart-count"> 
+      <?php 
+      $reqQte = "SELECT COUNT(*) AS CO FROM PANIER WHERE idPanier = :idPan";
+      $lePanier = oci_parse($connect, $reqQte);
+      $sess_id = session_id();
+      oci_bind_by_name($lePanier,":idPan", $sess_id);
+      $resultPan = oci_execute($lePanier);
+      if (!$resultPan) {
+          $m = oci_error($lePanier);
+          print htmlentities($m['message'] . ' pour cette requete : ' . $m['sqltext']);
+      }
+      $compteur = 0;
+      while (($recupQte = oci_fetch_assoc($lePanier)) != false) {
+          $compteur = $recupQte['CO'];
+      }
+      oci_free_statement($lePanier);
+      if ($compteur != 0) {
+      echo $compteur;
+      }
+      ?>
+      </span>
+      </div>
       <?php 
       if (isset($_SESSION['acces'])) {
-        echo '<a href="Deconnexion.php" onClick ="actionDelete()"> <img src="images/deco.png"> </a>';
+        echo '<a href="Deconnexion.php"> <img src="images/deco.png"> </a>';
       }
       ?>
     </div>
   </nav>
 </header>
-
-<script>
-function actionDelete(){
-  if(confirm('Supprimer les cookies ?')){
-    <?php setcookie('cookIdent', "", time()-3600); ?>
-    alert('Cookies supprimés !');
-  }
-}
-</script>

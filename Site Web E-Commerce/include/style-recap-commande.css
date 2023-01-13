@@ -1,0 +1,22 @@
+.panier {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 35%;
+    margin-left: 35%;
+    padding: 6%;
+    border-radius: 1.5%;
+    border-style: inset;
+}
+
+.close-popup{
+    display: none;
+}
+
+.aff{
+    color: red;
+}
+
+.hidden {
+    display: none;
+}

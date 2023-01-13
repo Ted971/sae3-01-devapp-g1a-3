@@ -30,80 +30,83 @@
                     print htmlentities($e['message'] . ' pour cette requete : ' . $e['sqltext']);
                 }
                 while (($client = oci_fetch_assoc($nomC)) != false) {
-                    echo "<BR>Compte n°".$client['IDCLIENT']."<BR><BR>";
-                    echo "<FONT size='5pt'>Informations personnelles:<BR></FONT>";
+                    //echo "<BR>Compte n°".$client['IDCLIENT']."<BR><BR>";
+                    echo "</br>";
+                    echo "<font size='4pt'>Informations personnelles :</br></font>";
+                    echo "</br>";
                     echo "<form action = 'traitModif.php' method = 'POST'>";
                     echo "<input type = 'hidden' name = 'id' value = '".$client['IDCLIENT']."'>";
-                    echo "Prénom:";
+                    echo "Prénom :   ";
                     echo  "<input type = 'text' name = 'first_name' value = '".$client['PRENOMCLIENT']."'<BR><BR>";
-                    echo "<BR>Nom:";
+                    echo "</br> Nom :   ";
                     echo "<input type = 'text' name = 'last_name' value = '".$client['NOMCLIENT']."'<BR><BR>";
-                    echo "<BR>Date de naissance:";
-                    echo "<input type = 'date' name = 'date_naiss' value = '".$client['DTENAISSANCECLIENT']."'<BR><BR>";
+                    echo "</br> Date de naissance :   ";
+                    $dtn = $client['DTENAISSANCECLIENT'];
+                    $dtn = explode("-", $dtn);
+                    $memoire = $dtn[2];
+                    $memoire2 = $dtn[0];
+                    $dtn[0] = $memoire;
+                    $dtn[2] = $memoire2;
+                    if($dtn[0] < 25){
+                        $dtn[0] = "20".$dtn[0];
+                    }else{
+                        $dtn[0] = "19".$dtn[0];
+                    }
+                    if($dtn[1] == 'JAN'){
+                        $dtn[1] = '01';
+                    }else if($dtn[1] == 'FEB'){
+                        $dtn[1] = '02';
+                    }else if($dtn[1] == 'MAR'){
+                        $dtn[1] = '03';
+                    }else if($dtn[1] == 'APR'){
+                        $dtn[1] = '04';
+                    }else if($dtn[1] == "MAY"){
+                        $dtn[1] = '05';
+                    }else if($dtn[1] == 'JUN'){
+                        $dtn[1] = '06';
+                    }else if($dtn[1] == 'JUL'){
+                        $dtn[1] = '07';
+                    }else if($dtn[1] == 'AUG'){
+                        $dtn[1] = '08';
+                    }else if($dtn[1] == 'SEP'){
+                        $dtn[1] = '09';
+                    }else if($dtn[1] == 'OCT'){
+                        $dtn[1] = '10';
+                    }else if($dtn[1] == 'NOV'){
+                        $dtn[1] = '11';
+                    }else if($dtn[1] == 'DEC'){
+                        $dtn[1] = '12';
+                    }
+                    echo "<input type = 'date' name = 'date_naiss' value = '".$dtn[0]."-".$dtn[1]."-".$dtn[2]."'<BR><BR>";
                     /*echo "<BR>Pseudo:";
                     echo "<input type = 'text' name = 'username' value = '".$client['PSEUDOCLIENT']."'<BR><BR>";*/
-                    echo "<BR>Adresse e-mail:";
+                    echo "</br> Adresse e-mail :   ";
                     echo "<input type = 'text' name = 'mail' value = '".$client['MAILCLIENT']."'<BR><BR>";
-                    echo "<BR><FONT size='5pt'>Adresse de facturation:<BR></FONT>";
-                    echo "<BR>Pays:";
+                    echo "</br><font size='4pt'> Adresse de facturation :</br></font>";
+                    echo "</br> Pays :   ";
                     echo "<select name='country' id='country-select' class='cadreInput'>
                         <option value='France' class='cadreInput'>France</option>
                         <option value='Espagne'>Espagne</option>
                         <option value='Belgique'>Belgique</option>
-                        value = '".$client['PAYSCLIENT']."'</select><BR><BR>";
-                    echo "<BR>Departement:";
-                    echo "<input type = 'text' name = 'departement' value = '".$client['DEPARTEMENTCLIENT']."'<BR><BR>";
-                    echo "<BR><input type = 'submit' name = 'modifier' value = 'Modifier'/>";
+                        value = '".$client['PAYSCLIENT']."'</select>";
+                    echo "</br></br> Département :   ";
+                    echo "<input type = 'text' name = 'departement' value = '".$client['DEPARTEMENTCLIENT']."'</br></br>";
+                    echo "</br><input type = 'submit' name = 'modifier' value = 'Modifier'/>";
                 }
+                echo "<BR><BR><a href='commandePassee.php'>Accédez aux commandes précédentes</a>";
                 echo "</div>";
             } else {
                 ?>
             <div style='padding-bottom: 20px; padding-top: 20px'>
-                <span style='font-weight: bold'>Connexion : </span> </br> </br>
+                <span style='font-weight: bold'>Continuer avec mon adresse e-mail ou mon login : </span> </br> </br>
                 <?php
                     if (isset($_GET['msgErreurConn'])) {
                         echo "<h2>".htmlentities($_GET['msgErreurConn'])."</h2>";
                     }
                 ?>
-                <form action = "TraitConnexion.php" method = "POST">
-                    Identifiant : <input type = 'text' name = 'login'
-                    <?php
-                        if (isset($_COOKIE['cookIdent'])) {
-                            echo "value='".$_COOKIE['cookIdent']."' ";
-                        }
-                    ?>
-                    class="cadreInput" /> </br></br>
-                    Mot de passe : <input type = 'password' name = 'password' class="cadreInput"/> </br> </br>
-                    Se souvenir de moi : <input type = 'checkbox' name = 'souvenir' /> </br> </br>
+                <form action = 'TraitRedirection.php' method = 'POST'>
+                    E-mail / Login : <input type = 'text' name = 'id' class='cadreInput' /> </br></br>
                     <input type = 'submit' name = 'Valider' value = 'Valider'/> </br>
-                </form>
-            </div>
-            <div style='padding-bottom: 20px; padding-top: 20px'>
-                <span style='font-weight: bold'>Création d'un compte : </span> </br> </br>
-                <?php
-                    if (isset($_GET['msgErreur'])) {
-                        echo "<h2>".htmlentities($_GET['msgErreur'])."</h2>";
-                    }
-                ?>
-                <form action = "TraitCreation.php" method = "POST">
-                        Pseudo : <input type = 'text' name = 'username' class="cadreInput"/> </br></br> 
-                        Nom : <input type = 'text' name = 'last_name' class="cadreInput"/> </br></br>
-                        Prenom : <input type = 'text' name = 'first_name' class="cadreInput"/> </br></br>
-                        Date de naissance : <input type = 'date' name = 'date_naiss' class="cadreInput"/> </br></br>
-                        Pays :
-                        <select name="country" id="country-select" class="cadreInput">
-                            <option value="France" class="cadreInput">France</option>
-                            <option value="Espagne">Espagne</option>
-                            <option value="Belgique">Belgique</option>
-                        </select> </br></br>
-                        <!-- Faire disparaitre département si autre que France -->
-                        Département : <input type = 'number' name = 'departement' class="cadreInput" min="1" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"/> </br> </br>
-                        Adresse Mail : <input type = 'email' name = 'mail' class="cadreInput"/> </br></br>
-                        Mot de passe : <input type = 'password' name = 'password' class="cadreInput"/> </br> </br>
-                        <input type = 'submit' name = 'Valider' value = 'Valider'/> </br>
-                </form>
-                <form action = "traitAjoutP.php" method = "POST">
-                <input type = 'submit' name = 'test' value = 'test'/> </br>
                 </form>
             </div>
             <?php }  ?>
@@ -111,3 +114,4 @@
     <?php include_once("./include/footer.php"); ?>
 </body>
 </html>
+

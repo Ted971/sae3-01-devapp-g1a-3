@@ -8,6 +8,53 @@ session_start();
 
 if($_SERVER['REQUEST_METHOD'] == "POST" AND isset($_POST['AffQtePan']) AND $GLOBALS['cptInsert'] < 1)
 {
+    $reqPanCheck = "SELECT * FROM Panier P WHERE P.idPanier = :pIdPan";
+    $PanCheck = oci_parse($connect, $reqPanCheck);
+    $sessComm = session_id();
+    oci_bind_by_name($PanCheck, ":pIdPan", $sessComm);
+    $resultCheck = oci_execute($PanCheck);
+    if (!$resultCheck) {
+        $k = oci_error($PanCheck);
+        print htmlentities($k['message'] . ' pour cette requete : ' . $k['sqltext']);
+    }
+    $j=0;
+    while (($check = oci_fetch_assoc($PanCheck)) != false) {
+        $reqCaracCheck = "SELECT qteStockee FROM Caracteristiques P WHERE idDetailProduit = :pidPanProd AND colorisProduit = :pidPanCol AND tailleProduit = :pidPanSize";
+        $CaracPanCheck = oci_parse($connect, $reqCaracCheck);
+        $idProduitPan = $check['IDDETAILPRODUIT'];
+        $colorPan = $check['COLORISPRODUIT'];
+        $taillePan = $check['TAILLEPRODUIT'];
+        oci_bind_by_name($CaracPanCheck, ":pidPanProd", $idProduitPan);
+        oci_bind_by_name($CaracPanCheck, ":pidPanCol", $colorPan);
+        oci_bind_by_name($CaracPanCheck, ":pidPanSize", $taillePan);
+        $resultCaracCheck = oci_execute($CaracPanCheck);
+        if (!$resultCaracCheck) {
+            $u = oci_error($CaracPanCheck);
+            print htmlentities($u['message'] . ' pour cette requete : ' . $u['sqltext']);
+        }
+        while (($carac = oci_fetch_assoc($CaracPanCheck)) != false) {
+            if ($carac['QTESTOCKEE'] - $check['QTEPANIER'] < 0) {
+                $reqDeletePan = "DELETE FROM Panier P WHERE P.idPanier = :pIdLastPan AND P.idDetailProduit = :pidProd AND P.tailleProduit = :pTaille AND P.colorisProduit = :pColor ";
+                $DeletePanier = oci_parse($connect, $reqDeletePan);
+                $sessPanier = session_id();
+                oci_bind_by_name($DeletePanier, ":pIdLastPan", $sessPanier);
+                oci_bind_by_name($DeletePanier, ":pidProd", $idProduitPan);
+                oci_bind_by_name($DeletePanier, ":pTaille", $taillePan);
+                oci_bind_by_name($DeletePanier, ":pColor", $colorPan);
+                $resultDelete = oci_execute($DeletePanier);
+                if (!$resultDelete) {
+                    $u = oci_error($DeletePanier);
+                    print htmlentities($u['message'] . ' pour cette requete : ' . $u['sqltext']);
+                }
+                oci_free_statement($DeletePanier);
+                oci_commit($connect);
+                header('Location: Panier.php');
+                exit();
+            }
+        }
+    }
+    oci_free_statement($PanCheck);
+
     $req = "SELECT * FROM Panier WHERE idPanier = :pIdPan";
     $lePanier = oci_parse($connect, $req);
     $sessPan = session_id();

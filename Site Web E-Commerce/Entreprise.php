@@ -42,6 +42,11 @@
 			De nos jours, notre ligne de produits s'est étendue et diversifiée et nous vendons
 			maintenant tout type de vêtement. Nos produit conviennent aussi bien pour
 			homme que pour femme.
+			En mars 2013, le fondateur Victor Thompson décide de lancer le « slip qui sent bon ». 
+			Ce projet a été financé grâce à la plateforme de financement participatif My Major Company. En l’espace de trois mois, la marque a pu collecter environ 23 000 euros. 
+			La particularité de ce slip est qu’il incorpore des micro-capsules de parfum, lesquelles libèrent leur odeur lorsqu'elles entrent en contact avec la peau. 
+			Le « slip qui sent bon » peut diffuser son parfum jusqu’à trente lavages.
+			Le 24 octobre 2016, Experienced Capital annonce son entrée, à hauteur de 36,5 %, au capital de la société La Parure Française
         </section><BR><hr>
 		
         <h1> Notre équipe </h1>

@@ -1,6 +1,5 @@
 <?php
 	require_once("connect.inc.php");
-	error_reporting(0);
 
     if (isset($_POST['Valider']) && ($_POST['username'] != "") && ($_POST['password'] != "") && ($_POST['last_name'] != "") && ($_POST['first_name'] != "") && ($_POST['mail'] != "") && ($_POST['date_naiss'] != "") && ($_POST['departement'] != "")) {
 		// on crée une autre variable pour la définition d'une requête paramétrée d'insertion
@@ -32,7 +31,6 @@
 
 		$hashMDP = password_hash($mdpClient, PASSWORD_DEFAULT);
 
-		oci_bind_by_name($insertClient, ":idC", $idClient);
 		oci_bind_by_name($insertClient, ":psC", $pseudoClient);
 		oci_bind_by_name($insertClient, ":nomC", $nomClient);
 		oci_bind_by_name($insertClient, ":preC", $prenomClient);
@@ -59,7 +57,7 @@
 		header('location: FormConnexion.php');
 		exit();
 	} else {
-        header('location: FormConnexion.php?msgErreur=Tous les champs n\'ont pas été remplis correctement');
+        header('location: FormCreationCompte.php?msgErreur=Tous les champs n\'ont pas été remplis correctement');
         exit();
     }
 ?>
