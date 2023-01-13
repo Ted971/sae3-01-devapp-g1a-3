@@ -1,0 +1,4 @@
+|2023 01 11 |11:13:43|AM107-6|activity:153|co2:1374|humidity:49.5|illumination:9|pressure:1001.6|temperature:19.2|tvoc:178|
+|2023 01 11 |11:53:43|AM107-6|activity:404|co2:2734|humidity:55|illumination:47|pressure:1001.8|temperature:20.9|tvoc:297|
+|2023 01 11 |12:03:43|AM107-6|activity:449|co2:3035|humidity:56|illumination:49|pressure:1001.9|temperature:21.2|tvoc:332|
+|2023 01 12 |10:02:49|AM107-6|activity:245|co2:1946|humidity:52.5|illumination:56|pressure:1004|temperature:21|tvoc:307|
