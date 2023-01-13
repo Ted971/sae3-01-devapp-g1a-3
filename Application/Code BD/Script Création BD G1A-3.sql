@@ -9,6 +9,7 @@ DROP TABLE CONSTITUER CASCADE CONSTRAINTS;
 DROP TABLE CARACTERISTIQUES CASCADE CONSTRAINTS;
 DROP TABLE ADRESSE CASCADE CONSTRAINTS;
 DROP TABLE PANIER CASCADE CONSTRAINTS;
+DROP TABLE LIVRAISON CASCADE CONSTRAINTS;
 
 -- -- -----------------------------------------------------------------------------
 -- --       FONCTION : GET_GENRE
@@ -127,7 +128,8 @@ CREATE TABLE PAIEMENT
     numCarte NUMBER(16),
     nomCarte VARCHAR(64),
     cvvCarte NUMBER(3),
-    expiCarte DATE, 
+    expiCarte VARCHAR(5),
+    idClient NUMBER(8),
     CONSTRAINT pk_paiement PRIMARY KEY (idPaiement),
     CONSTRAINT ck_numcarte CHECK (LENGTH(numCarte) = 16),
     CONSTRAINT ck_cvvCarte CHECK (LENGTH(cvvCarte) = 3) 
@@ -155,8 +157,9 @@ CREATE TABLE FORMULAIRE
     idFormulaire NUMBER(8),
     idClient NUMBER(8),
     mailFormulaire VARCHAR(128),
-    messageFormulaire VARCHAR(500),   
-    CONSTRAINT pk_formulaire PRIMARY KEY (idFormulaire)  
+    titreFormulaire VARCHAR(128),
+    messageFormulaire VARCHAR(500),
+    CONSTRAINT pk_formulaire PRIMARY KEY (idFormulaire)
    ) ;
 
 
@@ -192,7 +195,8 @@ CREATE TABLE CONSTITUER
     idCommande NUMBER(8),
     idProduit NUMBER(8),
     qteCommandee NUMBER(5),
-    CONSTRAINT pk_constituer PRIMARY KEY (idCommande, idProduit),
+    colorisProduit VARCHAR(128),
+    tailleProduit VARCHAR(128),
     CONSTRAINT ck_constituer_qteCommandee CHECK (qteCommandee>=1)
    ) ;
 
@@ -211,17 +215,29 @@ CREATE TABLE CARACTERISTIQUES
    ) ;
    
    
-   -- -----------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------
+--       TABLE : LIVRAISON
+-- -----------------------------------------------------------------------------
+
+CREATE TABLE LIVRAISON
+   (
+    idClient NUMBER(8),
+    idCommande NUMBER(8),
+    adresseLivraison VARCHAR(100),
+    CONSTRAINT pk_livraison PRIMARY KEY (idClient, idCommande)
+   ) ;
+
+-- -----------------------------------------------------------------------------
 --       TABLE : ADRESSE
 -- -----------------------------------------------------------------------------
 
 CREATE TABLE ADRESSE
    (
     idClient NUMBER(8),
-    idCommande NUMBER(8),
-    adresseLivraison VARCHAR(100),
-    CONSTRAINT pk_adresse PRIMARY KEY (idClient, idCommande)
+    adresseClient VARCHAR(100),
+    CONSTRAINT fk_adresse_client FOREIGN KEY (idClient) REFERENCES CLIENT (idClient)
    ) ;
+
 
 -- -----------------------------------------------------------------------------
 --       CREATION DES REFERENCES DE TABLE
@@ -254,12 +270,11 @@ ADD CONSTRAINT fk_carac_idDetailProduit FOREIGN KEY (idDetailProduit) REFERENCES
 ALTER TABLE FORMULAIRE
 ADD CONSTRAINT fk_formulaire_idClient FOREIGN KEY (idClient) REFERENCES Client (idClient);
 
-ALTER TABLE ADRESSE
-ADD CONSTRAINT fk_adresse_idClient FOREIGN KEY (idClient) REFERENCES Client (idClient);
+ALTER TABLE LIVRAISON
+ADD CONSTRAINT fk_livraison_idClient FOREIGN KEY (idClient) REFERENCES Client (idClient);
 
-ALTER TABLE ADRESSE
-ADD CONSTRAINT fk_adresse_idCommande FOREIGN KEY (idCommande) REFERENCES COMMANDE (idCommande);
-
+ALTER TABLE LIVRAISON
+ADD CONSTRAINT fk_livraison_idCommande FOREIGN KEY (idCommande) REFERENCES COMMANDE (idCommande);
 -- -----------------------------------------------------------------------------
 --       VALIDATION DE LA CREATION
 -- -----------------------------------------------------------------------------

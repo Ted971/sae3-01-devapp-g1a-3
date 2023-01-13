@@ -343,6 +343,8 @@ INSERT INTO Client (idClient, nomClient, prenomClient, pseudoCLient, mailClient,
 VALUES (seq_Client.NEXTVAL,'ClientTest','client','ctest','clientTest@gmail.com','28/12/2022','France',32,'jzZmL60OoFbEm5XwE8DVQeoF9PkzIXyNTXoyRpEcZP4o0cjn2j6', 'Client');
 INSERT INTO Client (idClient, nomClient, prenomClient, pseudoCLient, mailClient, dteNaissanceClient, paysClient, departementClient, passwordClient, roleClient)
 VALUES (seq_Client.NEXTVAL,'AdminTest','admin','atest','adminTest@gmail.com','28/12/2022','France',32,'$2y$10$uuOHtFUaWRYa2hSrwyEALuNDIDRWNY5vPBZOrGUARxNfbxTAdJ0w6', 'Admin');
+INSERT INTO Client (idClient, nomClient, prenomClient, pseudoCLient, mailClient, dteNaissanceClient, paysClient, departementClient, passwordClient, roleClient)
+VALUES (seq_Client.NEXTVAL,'abc','def','abc','abc@gmail.com','01/01/2000','France',36,'$2y$10$l44ovV2dYbuxaP64DtBaYeNicAwv3rKEBLHDb0APC29c6dS8CssT2', 'Client');
 
 DROP SEQUENCE seq_detailP;
 CREATE SEQUENCE seq_detailP
@@ -2711,106 +2713,108 @@ CREATE SEQUENCE seq_paiement
 START WITH 1
 INCREMENT BY 1;
 
-INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte)
-VALUES (seq_paiement.NEXTVAL,7458214598752146, 'esther', 547, '21/10/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,8538238390855351,'Zachery','283','26/09/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2548848984003102,'Gary','491','07/07/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2562188746413706,'Petra','389','16/10/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,9598299486200296,'Odysseus','384','31/07/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1142033408612909,'Jerome','935','05/12/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,7173500101072796,'Peter','655','22/03/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3468824664755513,'Galvin','875','23/12/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5329340562362678,'Timon','841','05/09/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,4792922921006327,'Vaughan','144','02/07/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1513714407925439,'Kelly','687','15/09/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1614759557058509,'Louis','858','18/01/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2816947358340052,'Emerson','947','12/09/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3081415397328043,'Tatum','350','19/02/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2753809728817730,'Ryan','322','27/12/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3797326056959529,'Paul','643','28/08/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5385686931142295,'Simon','540','18/10/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,8404236792380182,'Yvonne','599','21/10/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2281010513310363,'Deborah','265','06/07/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5384751331801008,'Deacon','702','11/03/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,7177013217159766,'Shea','310','10/07/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,4629706949523753,'Neil','598','31/01/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,8822479119620612,'Yoshio','973','30/04/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6610724268103379,'Matthew','800','12/09/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,9339683793139456,'Sybil','454','26/04/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,4196576888472797,'Zia','807','23/08/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5255578204475345,'Reuben','430','10/11/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,2824683816893547,'Hiram','699','25/05/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,7950091928739404,'Quynn','295','31/03/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,9389669420539416,'Cheryl','879','02/04/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3681657905848158,'Lyle','991','26/10/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,9510299086710548,'Demetria','882','04/04/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6389892370417227,'Rooney','997','25/08/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3204394249137647,'Fitzgerald','983','23/06/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5822748999576642,'Marny','382','29/05/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1813835110087355,'Zeph','273','27/06/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,3165350526252782,'Shay','485','17/09/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1777180722585053,'Driscoll','629','21/03/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,4361315645016814,'Abraham','435','14/02/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5266530975929417,'Eagan','163','20/03/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,7504593714300658,'Clinton','298','13/04/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,1698916881417810,'Harlan','415','10/10/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6732281452265815,'Quintessa','261','31/07/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,4500793833104475,'Natalie','278','22/04/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,5082833721146954,'Zachary','215','12/04/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,8051658678945596,'Gage','672','14/08/2025');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,7515115975774231,'Micah','877','07/04/2027');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6268519873146395,'Kuame','138','15/09/2026');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6767719234908550,'Odette','121','27/11/2024');
-INSERT INTO PAIEMENT (idPaiement,numCarte,nomCarte,cvvCarte,expiCarte)
-VALUES (seq_paiement.NEXTVAL,6004232180260534,'Adrienne','990','18/07/2025');
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7458214598752146, 'esther', 547, '10/27', 1);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,8538238390855351,'Zachery','283','09/26', 2);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2548848984003102,'Gary','491','07/26', 3);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2562188746413706,'Petra','389','10/27', 4);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,9598299486200296,'Odysseus','384','07/24', 5);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1142033408612909,'Jerome','935','12/27', 6);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7173500101072796,'Peter','655','03/25', 7);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3468824664755513,'Galvin','875','12/25', 8);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5329340562362678,'Timon','841','09/24', 9);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,4792922921006327,'Vaughan','144','07/25', 10);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1513714407925439,'Kelly','687','09/24', 11);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1614759557058509,'Louis','858','01/26', 12);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2816947358340052,'Emerson','947','09/27', 13);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3081415397328043,'Tatum','350','02/25', 14);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2753809728817730,'Ryan','322','12/25', 15);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3797326056959529,'Paul','643','08/24', 16);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5385686931142295,'Simon','540','10/26', 17);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,8404236792380182,'Yvonne','599','10/27', 18);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2281010513310363,'Deborah','265','07/24', 19);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5384751331801008,'Deacon','702','03/24', 20);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7177013217159766,'Shea','310','07/26', 21);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,4629706949523753,'Neil','598','01/25', 22);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,8822479119620612,'Yoshio','973','04/25', 23);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6610724268103379,'Matthew','800','09/25', 24);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,9339683793139456,'Sybil','454','04/26', 25);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,4196576888472797,'Zia','807','08/25', 26);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5255578204475345,'Reuben','430','11/27', 27);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,2824683816893547,'Hiram','699','05/25', 28);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7950091928739404,'Quynn','295','03/25', 29);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,9389669420539416,'Cheryl','879','04/25', 30);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3681657905848158,'Lyle','991','10/27', 31);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,9510299086710548,'Demetria','882','04/24', 32);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6389892370417227,'Rooney','997','08/26', 33);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3204394249137647,'Fitzgerald','983','06/27', 34);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5822748999576642,'Marny','382','05/26', 35);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1813835110087355,'Zeph','273','06/27', 36);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,3165350526252782,'Shay','485','09/24', 37);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1777180722585053,'Driscoll','629','03/24', 38);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,4361315645016814,'Abraham','435','02/25', 39);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5266530975929417,'Eagan','163','03/25', 40);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7504593714300658,'Clinton','298','04/24', 41);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,1698916881417810,'Harlan','415','10/27', 42);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6732281452265815,'Quintessa','261','07/25', 43);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,4500793833104475,'Natalie','278','04/25', 44);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,5082833721146954,'Zachary','215','04/26', 45);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,8051658678945596,'Gage','672','08/25', 46);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,7515115975774231,'Micah','877','04/27', 47);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6268519873146395,'Kuame','138','09/26', 48);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6767719234908550,'Odette','121','11/24', 49);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6004232180260534,'Adrienne','990','07/25', 50);
+INSERT INTO PAIEMENT (idPaiement,numCarte, nomCarte, cvvCarte, expiCarte, idClient)
+VALUES (seq_paiement.NEXTVAL,6004232180260535,'abc','101','02/26', 53);
 
 
 
@@ -3025,6 +3029,10 @@ VALUES (seq_commande.NEXTVAL,48,2,'15/05/2019');
 
 -- SELECT * FROM PAIEMENT;
 -- SELECT * FROM COMMANDE;
+DROP SEQUENCE seq_constituer;
+CREATE SEQUENCE seq_constituer
+START WITH 101
+INCREMENT BY 1;
 
 INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (1, 24, 5);
@@ -3036,1005 +3044,1012 @@ INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (1, 4, 2);
 INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (1, 14, 1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (2,42,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (2,33,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (2,7,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (2,44,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (2,30,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (3,12,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (3,34,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (3,8,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (3,41,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (3,29,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (4,38,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (4,44,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (4,12,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (4,28,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (4,30,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (5,10,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (5,8,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (5,30,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (5,23,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (5,13,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (6,40,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (6,16,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (6,10,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (6,1,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (6,39,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (7,48,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (7,19,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (7,22,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (7,18,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (7,8,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (8,35,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (8,38,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (8,21,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (8,25,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (8,6,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (9,3,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (9,26,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (9,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (9,33,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (9,18,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (10,20,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (10,16,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (10,28,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (10,2,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (10,1,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (11,43,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (11,4,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (11,33,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (11,32,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (11,26,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (12,20,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (12,46,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (12,23,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (12,17,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (12,25,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (13,25,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (13,34,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (13,17,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (13,31,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (13,28,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (14,15,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (14,50,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (14,32,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (14,47,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (14,41,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (15,27,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (15,18,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (15,22,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (15,42,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (15,2,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (16,19,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (16,47,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (16,44,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (16,14,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (16,34,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (17,13,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (17,36,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (17,9,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (17,19,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (17,28,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (18,41,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (18,36,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (18,31,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (18,21,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (18,35,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (19,22,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (19,2,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (19,5,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (19,46,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (19,47,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (20,48,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (20,43,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (20,24,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (20,47,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (20,46,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (21,6,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (21,25,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (21,9,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (21,12,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (21,14,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (22,17,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (22,26,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (22,30,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (22,49,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (22,14,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (23,38,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (23,47,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (23,16,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (23,40,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (23,18,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (24,6,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (24,37,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (24,45,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (24,43,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (24,14,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (25,9,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (25,38,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (25,5,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (25,14,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (25,12,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (26,32,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (26,26,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (26,34,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (26,11,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (26,15,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (27,46,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (27,7,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (27,12,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (27,38,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (27,11,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (28,11,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (28,3,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (28,44,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (28,31,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (28,2,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (29,46,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (29,42,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (29,19,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (29,36,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (29,8,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (31,23,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (31,8,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (31,10,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (31,12,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (31,13,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,16,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,30,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,37,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,12,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,35,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (32,19,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,32,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,47,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,40,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,42,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,17,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (33,7,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (34,12,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (34,37,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (34,49,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (34,9,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (34,4,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (35,16,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (35,10,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (35,49,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (35,17,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (35,42,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (36,50,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (36,45,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (36,20,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (36,6,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (36,41,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (37,17,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (37,2,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (37,46,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (37,27,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (37,5,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (38,39,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (38,10,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (38,12,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (38,34,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (38,8,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (39,27,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (39,33,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (39,41,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (39,16,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (39,15,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (40,26,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (40,30,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (40,21,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (40,20,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (40,32,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,10,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,38,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,36,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,39,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,47,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (41,18,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (42,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (42,30,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (42,13,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (42,8,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (42,41,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (43,43,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (43,13,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (43,25,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (43,38,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (43,15,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (44,28,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (44,5,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (44,11,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (44,40,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (44,9,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (45,38,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (45,40,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (45,37,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (45,2,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (45,7,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (46,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (46,18,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (46,11,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (46,37,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (46,3,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (47,29,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (47,41,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (47,21,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (47,23,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (47,8,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (48,26,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (48,37,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (48,9,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (48,3,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (48,36,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (49,10,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (49,23,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (49,30,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (49,19,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (49,47,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (50,26,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (50,12,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (50,1,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (50,4,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (50,9,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (51,11,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (51,2,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (51,36,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (51,15,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (51,23,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (52,46,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (52,27,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (52,1,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (52,34,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (52,3,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (53,50,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (53,25,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (53,49,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (53,38,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (53,35,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (54,16,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (54,10,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (54,24,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (54,23,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (54,31,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (55,8,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (55,39,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (55,24,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (55,12,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (55,31,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (56,47,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (56,43,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (56,32,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (56,20,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (56,49,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (57,27,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (57,13,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (57,7,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (57,46,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (57,32,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (58,9,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (58,6,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (58,7,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (58,44,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (58,42,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (59,37,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (59,31,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (59,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (59,22,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (59,20,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (60,16,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (60,42,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (60,46,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (60,12,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (60,4,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (61,11,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (61,20,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (61,4,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (61,15,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (61,48,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (62,15,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (62,24,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (62,18,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (62,41,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (62,32,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (63,41,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (63,33,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (63,4,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (63,20,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (63,26,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (64,27,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (64,22,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (64,28,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (64,36,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (64,2,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (65,47,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (65,45,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (65,2,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (65,16,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (65,19,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (66,12,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (66,32,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (66,23,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (66,25,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (66,44,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (67,28,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (67,16,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (67,36,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (67,43,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (67,4,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (68,39,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (68,41,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (68,34,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (68,2,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (68,7,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (69,46,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (69,10,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (69,49,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (69,26,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (69,4,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (70,17,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (70,40,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (70,27,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (70,2,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (70,39,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (71,7,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (71,19,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (71,48,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (71,44,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (71,34,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (72,36,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (72,17,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (72,18,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (72,42,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (72,32,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (73,1,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (73,39,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (73,9,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (73,14,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (73,35,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (74,39,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (74,35,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (74,8,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (74,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (74,17,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (75,22,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (75,15,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (75,13,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (75,31,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (75,30,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (76,22,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (76,12,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (76,43,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (76,3,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (76,10,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (77,21,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (77,30,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (77,17,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (77,45,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (77,34,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (78,38,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (78,2,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (78,32,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (78,15,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (78,20,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (79,32,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (79,14,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (79,7,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (79,22,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (79,17,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (80,3,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (80,36,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (80,23,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (80,15,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (80,43,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (81,37,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (81,27,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (81,15,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (81,28,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (81,5,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (82,41,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (82,39,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (82,34,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (82,11,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (82,1,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (83,23,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (83,16,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (83,28,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (83,43,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (83,9,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (84,12,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (84,21,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (84,28,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (84,9,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (84,13,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (85,26,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (85,28,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (85,15,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (85,32,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (85,35,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (86,44,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (86,45,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (86,19,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (86,41,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (86,38,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (87,28,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (87,23,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (87,14,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (87,36,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (87,49,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (88,21,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (88,18,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (88,47,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (88,8,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (88,16,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (89,30,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (89,20,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (89,23,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (89,28,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (89,44,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (90,12,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (90,9,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (90,32,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (90,22,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (90,26,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (91,13,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (91,12,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (91,2,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (91,29,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (91,5,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (92,30,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (92,18,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (92,42,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (92,32,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (92,14,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (93,26,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (93,36,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (93,6,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (93,3,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (93,46,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (94,39,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (94,10,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (94,20,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (94,34,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (94,9,2);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (95,39,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (95,37,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (95,44,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (95,46,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (95,41,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (96,23,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (96,35,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (96,5,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (96,46,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (96,32,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (97,40,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (97,7,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (97,39,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (97,37,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (97,12,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (98,2,3);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (98,44,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (98,15,5);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (98,7,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (98,32,10);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (99,2,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (99,41,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (99,47,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (99,38,8);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (99,13,9);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (100,43,4);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (100,37,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (100,38,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (100,47,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (100,45,6);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (101,12,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (101,41,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (101,24,7);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (101,1,1);
-INSERT INTO CONSTITUER (idCommande,idProduit,qteCommandee)
+INSERT INTO CONSTITUER (idCommande, idProduit, qteCommandee)
 VALUES (101,3,1);
 
-INSERT INTO ADRESSE (idClient, idCommande, adresseLivraison)
-VALUES (1, 1, '6 Rue du petit moulin');
+INSERT INTO LIVRAISON (idClient, idCommande, adresseLivraison)
+VALUES (1, 1, '6 rue du petit moulin');
+
+INSERT INTO ADRESSE (idClient, adresseClient)
+VALUES (1, '6 rue du petit moulin');
+INSERT INTO ADRESSE (idClient, adresseClient)
+VALUES (53, '17 rue du tournevier');
+INSERT INTO ADRESSE (idClient, adresseClient)
+VALUES (53, '5 rue de giverne');
 
 DROP SEQUENCE seq_formulaire;
 CREATE SEQUENCE seq_formulaire
