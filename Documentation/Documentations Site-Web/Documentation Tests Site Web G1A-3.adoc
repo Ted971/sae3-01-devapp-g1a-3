@@ -101,6 +101,10 @@ Même si le mot de passe est stockée en HASH, on utilise une fonction PHP perme
 
 image::./imagesTest/AffMessageNouveauClient.png[ConnexionNouveau]
 
+-------
+La documentation des tests du site web sera mise à jour lors du sprint 7 avec l'ensemble des fonctionnalités ajoutées
+-------
+
 =====
 
 ====
