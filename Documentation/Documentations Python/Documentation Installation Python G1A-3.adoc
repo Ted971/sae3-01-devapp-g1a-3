@@ -6,7 +6,7 @@
 
 ====
 
-Le programme peut être lancé sur Windows et Linux.
+Le programme peut-être lancé sur Windows et Linux.
 
 Un fichier de configuration en .ini devra également être situé dans le répertoire du programme car ce dernier utilise le fichier de configuration pour la récupération des paramètres.
 
@@ -42,7 +42,6 @@ link:https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Application
 ** time
 ** paho.mqtt.client 
 ** json
-** signal
 ** datetime
 ** configparser 
 
