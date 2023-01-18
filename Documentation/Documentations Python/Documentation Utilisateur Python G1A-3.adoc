@@ -45,7 +45,6 @@ image::./images/import.png[Image des Imports]
     * Le module time permet d'importer la fonction sleep().
     * Le module paho.mqtt.client permet de créer une liaison avec les capteurs mqtt et de recevoir et lire les données de ceux-ci.
     * Le module json nous permet de charger et récupérer les fichiers JSON contenant les informations des capteurs.
-    * Le module signal permet d'utiliser les différentes fonctions de signaux et nous permettra plus précisement ici d'utiliser le signal SIGALRM (création d'une alarme).
     * Le module datetime nous permet de connaitre et stocker l'heure et la date exacte de chaque message d'un bus de données provenant d'un capteur.
     * Le module configparser permet de lire le fichier de configuration en .ini qui contient les différents paramètres du projet.
 
@@ -75,16 +74,6 @@ image::./images/defenvoie.png[]
 * La fonction envoie() parcours le dictionnaire _StockDico_ et défini un descripteur de fichier pour ouvrir ou créer un fichier _.txt_ puis écris les valeurs de ce capteur dans le fichier. Chaque capteur possède son fichier avec les valeurs correspondantes.
 * La deuxième boucle parcours la liste _StockSeuil_ et défini un descripteur de fichier pour ouvrir ou créer un fichier _logsSeuil.txt_ afin d'y écrire tous les dépassements de seuil relevés lors du fonctionnement de l'application.
 
-
-====
-
-* Méthode alarme et redéfinition du signal SIGALRM :
-
-====
-
-image::./images/defalarme.png[]
-
-    * Quand on recoit un signal _signal.SIGALRM_ alors on appelle la métode fonctionALRM() qui appelle la méthode envoie() afin de traiter l'écriture des valeurs dans les fichiers.
 
 ====
 
