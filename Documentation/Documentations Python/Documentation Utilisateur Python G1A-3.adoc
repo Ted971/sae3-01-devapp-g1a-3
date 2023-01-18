@@ -138,7 +138,7 @@ image::./images/except.png[]
 
 =====
 
-image::./images/connecmqtt.png[]
+image::./images/connectmqtt.png[]
 
 * Cette partie du programme permet d'effectuer la gestion des bus _mqtt_ : 
 ** On commence par créer la connexion aux serveur _mqtt_ avec le nom du serveur en paramètre.
