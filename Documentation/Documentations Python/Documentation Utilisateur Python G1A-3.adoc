@@ -148,7 +148,7 @@ image::./images/connectmqtt.png[]
 
 =====
 =====
-image::./images/Capture d’écran du 2022-12-16 15-01-29.png[]
+image::./images/boucleinf.png[]
 
 * Le programme boucle à l'infini afin d'assurer la gestion de la fréquence d'écriture dans les fichiers capteurs. Pour ce faire, le programme utilise la fonction sleep() pour dormir _x_ minutes selon la fréquence d'écriture paramétrée dans le fichier de configuration.
 * Après que l'intervalle de temps soit passé, on remet a zéro le dictionnaire _StockDico_ et la liste _StockSeuil_ afin que chaque valeur écrite dans les fichiers capteurs soit unique.
