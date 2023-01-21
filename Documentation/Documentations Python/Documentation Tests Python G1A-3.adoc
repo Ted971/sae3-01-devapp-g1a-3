@@ -39,4 +39,6 @@ image::./imagesTests/autreAffichage.png[ImageCapteursNonSoumis]
 
 Conclusion :
 
------- Le programme passent tous les tests inspirés des critères d'évaluation du programme ! ------
+-------
+Le programme passent tous les tests inspirés des critères d'évaluation du programme ! 
+-------
