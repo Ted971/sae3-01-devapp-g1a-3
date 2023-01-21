@@ -177,7 +177,7 @@ CREATE TABLE CLIENT
     dteNaissanceClient DATE,
     paysClient VARCHAR(32),
     departementClient NUMBER(3),
-    passwordClient VARCHAR(64),
+    passwordClient VARCHAR(512),
     roleClient VARCHAR(32),
     CONSTRAINT pk_Client PRIMARY KEY (idClient),
     CONSTRAINT uk_Client_mail UNIQUE (mailClient),
@@ -245,9 +245,6 @@ CREATE TABLE ADRESSE
 
 ALTER TABLE DETAILPRODUIT
 ADD CONSTRAINT fk_detailProduit_idProduit FOREIGN KEY (idProduit) REFERENCES PRODUIT (idProduit);
-
-ALTER TABLE COMMANDE 
-ADD CONSTRAINT fk_commande_idPaiement FOREIGN KEY (idPaiement) REFERENCES PAIEMENT (idPaiement);
 
 ALTER TABLE COMMANDE 
 ADD CONSTRAINT fk_commande_idClient FOREIGN KEY (idClient) REFERENCES Client (idClient);

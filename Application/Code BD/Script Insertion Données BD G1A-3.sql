@@ -4047,9 +4047,9 @@ VALUES (1, 1, '6 rue du petit moulin');
 INSERT INTO ADRESSE (idClient, adresseClient)
 VALUES (1, '6 rue du petit moulin');
 INSERT INTO ADRESSE (idClient, adresseClient)
-VALUES (53, '17 rue du tournevier');
+VALUES (2, '17 rue du tournevier');
 INSERT INTO ADRESSE (idClient, adresseClient)
-VALUES (53, '5 rue de giverne');
+VALUES (3, '5 rue de giverne');
 
 DROP SEQUENCE seq_formulaire;
 CREATE SEQUENCE seq_formulaire
