@@ -88,7 +88,7 @@ http://192.168.224.139/~SAESYS03/Site[Lien vers le site web depuis l'IUT]
 [cols="1,2,2",options=header]
 |===========================================================
 |Date  |Nom du document               |Lien
-|`14/01/2023`  |Pages du Site Web "La Parure Française"            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence du site]| 
+|`21/01/2023`  |Pages du Site Web "La Parure Française"            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence du site]| 
 |===========================================================
 
 === Analyse d'impact site web
@@ -164,7 +164,7 @@ http://192.168.224.139/~SAESYS03/Site[Lien vers le site web depuis l'IUT]
 |===
 | Date    | Nom du document         |  Lien 
 | `16/12/2022` | Documentation technique python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Capteurs%20AM107%20Python%20G1A-3.pdf[Lien vers la documentation des capteurs AM107]
-| `16/12/2022` | Documentation installation python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Installation%20Python%20G1A-3.adoc[Lien vers la documentation d'installation Python]
+| `21/01/2023` | Documentation installation python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Installation%20Python%20G1A-3.adoc[Lien vers la documentation d'installation Python]
 | `06/01/2023` | *Documentation TESTS python* | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Tests%20Python%20G1A-3.adoc[Lien vers la documentation des Tests Python]
 | `21/01/2023` | Documentation utilisateur python | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Python/Documentation%20Utilisateur%20Python%20G1A-3.adoc[Lien vers la documentation utilisateur Python]
 | `21/01/2023` | Documentation Technique Java | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Java/Documentation%20Technique%20Java%20G1A-3.adoc[Lien vers la documentation technique Java]
@@ -176,10 +176,10 @@ http://192.168.224.139/~SAESYS03/Site[Lien vers le site web depuis l'IUT]
 
 === Informations utiles
 
-- `Version` du projet : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v6.0.0[6.0.0] +
+- `Version` du projet : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/releases/tag/v7.0.0[7.0.0] +
 - Lien vers les `user stories` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22+label%3A%22En+cours%22+[ici] +
 - Lien vers les `tâches` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3AT%C3%A2che+label%3A%22En+cours%22+[ici] +
-- Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/7[ici] +
+- Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/8[ici] +
 
 
 === Évaluations hebdomadaires
