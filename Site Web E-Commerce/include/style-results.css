@@ -17,6 +17,7 @@
     flex-direction: row;
     align-self: center;
     font-weight: bold;
+    color: #0000EE;
 }
 
 .resultImg {
@@ -25,6 +26,7 @@
     border: 1px solid;
     max-width: 100%;
     margin-bottom: 20px;
+    border-color: #0000EE;
 }
 
 .productAlign {

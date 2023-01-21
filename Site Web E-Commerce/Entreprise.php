@@ -12,7 +12,7 @@
 
 <body>
         <?php include_once("./include/header.php"); ?>
-        <h1> A propos de nous </h1>
+        <h1 id="a_propos"> A propos de nous </h1>
         <section>
             <!--Notre entreprise , “La parure française”, est une entreprise artisanale
 			spécialisée dans la vente de vêtements, sous-vêtements et accessoires
@@ -27,7 +27,7 @@
 			faire du surplace c’est un marathon, dont chaque pas contribue à CHANGER LE MONDE.
         </section><BR><hr>
 		
-        <h1> Notre histoire </h1>
+        <h1 id="histoire"> Notre histoire </h1>
         <section>
             En 2011, notre équipe de 5 collaborateurs créée l’entreprise “La parure
 			française”, suite à un défi lancé par des amis: vendre des vêtements et
@@ -49,7 +49,7 @@
 			Le 24 octobre 2016, Experienced Capital annonce son entrée, à hauteur de 36,5 %, au capital de la société La Parure Française
         </section><BR><hr>
 		
-        <h1> Notre équipe </h1>
+        <h1 id="equipe"> Notre équipe </h1>
         <section>
 			L'équipe de notre entreprise est composée de 5 membres :
 			<ul>

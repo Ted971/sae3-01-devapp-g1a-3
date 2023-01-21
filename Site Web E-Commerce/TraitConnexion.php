@@ -5,15 +5,17 @@
 
 	if (isset($_POST['Valider']) && isset($_POST['login']) && isset($_POST['password'])) {
 		// on va créer une requete paramétrée
-		$req2 = "SELECT passwordClient FROM Client WHERE pseudoClient = :psClient";
+		$req2 = "SELECT passwordClient FROM Client WHERE pseudoClient = :psClient OR mailClient = :mailClient";
 		// on prépare la requête
 		$lesClients = oci_parse($connect, $req2);
 			
 		// il faut passer par une variable pour contenir la valeur
-		$login = $_POST['login']; 
+		$login = $_POST['login'];
+		$mail = $_POST['login'];
 
 		// on lie la valeur au paramètre de la requête
 		oci_bind_by_name($lesClients, ":psClient", $login);
+		oci_bind_by_name($lesClients, ":mailClient", $mail);
 		
 		// on execute la requete
 		$result = oci_execute($lesClients);
@@ -42,7 +44,7 @@
 			header('location: index.php');
 			exit();
 		} else {
-			header('location: FormConnexion.php?msgErreurConn=Identifiants incorrects..');
+			header('location: FormConnexionCompte.php?msgErreurConn=Identifiants incorrects..&id='.$login);
 			exit();
 		}
 	}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="include/style.css">
     <link rel="stylesheet" type="text/css" href="include/style-footer.css">
     <link rel="stylesheet" type="text/css" href="include/style-header.css">
-
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
 
 </head>
 <body>
@@ -21,6 +21,7 @@
     $dollar = 0;
     $total = array();
     $tabCommande = array();
+    $bool = true;
     error_reporting(0);
     include("connect.inc.php");
                 $req = "SELECT CO.idcommande, CO.idPaiement, CO.idClient, CO.dateCommande, P.idProduit, P.nomProduit, D.descriptionProduit, D.matiereProduit, D.prixProduit, CS.qteCommandee, CS.tailleProduit, CS.colorisProduit FROM COMMANDE CO, CLIENT C, CONSTITUER CS, DETAILPRODUIT D, PRODUIT P, PAIEMENT PA
@@ -91,16 +92,17 @@
                     array_push($total, $tabCommande[$i+4]*$tabCommande[$i+5]);
                     echo "Référence de la commande : ".$tabCommande[$i+0]."<BR> Date de la commande : ".$tabCommande[$i+1]."<BR>";
                     echo "Produit Commandée : ".$tabCommande[$i+2]."<BR> Description : ".$tabCommande[$i+3]."<BR> ID produit : ".$tabCommande[$i+6]."<BR> Taille produit : ".$tabCommande[$i+7]."<BR> Coloris Produit : ".$tabCommande[$i+8]."<BR> Quantitée commandée : ".$tabCommande[$i+4]."<BR> Prix unitaire : ".$tabCommande[$i+5]."<BR><BR>";
-                    echo "Prix total : ".$total[$j]."€<BR><BR>";
+                    echo "Prix total : ".$total[$j]."€</br></br>";
                     $j = $j+1;
                 }else{
-                    echo "Référence de la commande : ".$tabCommande[$i+0]."<BR> Date de la commande : ".$tabCommande[$i+1]."<BR>";
-                    while ($tabCommande[$i+10] == $tabCommande[$i] || $tabCommande[$i-10] == $tabCommande[$i]){
+                    echo "</br> Référence de la commande : ".$tabCommande[$i+0]."<BR> Date de la commande : ".$tabCommande[$i+1]."<BR>";
+                    while ($bool == true && $tabCommande[$i+10] == $tabCommande[$i] || $tabCommande[$i-10] == $tabCommande[$i] ){
                         echo "Produit Commandée : ".$tabCommande[$i+2]."<BR> Description : ".$tabCommande[$i+3]."<BR> ID produit : ".$tabCommande[$i+6]."<BR> Taille produit : ".$tabCommande[$i+7]."<BR> Coloris Produit : ".$tabCommande[$i+8]."<BR> Quantitée commandée : ".$tabCommande[$i+4]."<BR> Prix unitaire : ".$tabCommande[$i+5]."<BR><BR>";
                         $dollar = $dollar + $tabCommande[$i+4]*$tabCommande[$i+5];
-                        if($tabCommande[$i+10] != null ){
-                            $i = $i+10;      
+                        if($tabCommande[$i+10] == null){
+                            $bool = false;
                         }
+                        $i = $i+10;
                     }
                     array_push($total, $dollar);
                     echo "Prix total : ".$total[$j]."€<BR><BR>";

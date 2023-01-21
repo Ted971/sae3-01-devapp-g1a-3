@@ -52,7 +52,6 @@ if (!$resultPaie) {
 oci_commit($connect);
 oci_free_statement($InsertPaie);
 
-exit();
 header('Location: recapitulatifCommande.php');
 exit();
 }

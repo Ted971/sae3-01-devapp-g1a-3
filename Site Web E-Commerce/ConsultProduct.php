@@ -76,7 +76,7 @@
         print htmlentities($e['message'] . ' pour cette requete : ' . $e['sqltext']);
     }
     include_once("./functions/displayCategorie.php");
-    echo "<H1> Liste des produits - ". replace_accents($category)." : </H1>";
+    echo "<H1 style='font-weight: bold; color: #0000EE;'>".replace_accents($category)." </H1>";
     ?>
     <div class="productAlign"> 
     <?php

@@ -8,7 +8,7 @@ include("connect.inc.php");?>
     <ul>
       <li style = "list-style-type: none;">
         <a href="Entreprise.php" class="Header__nav__link--hasSubmenuv2"> 
-            <span class="padded-element" data-text="Entreprise">Notre entreprise</span> 
+            <span class="padded-element" data-text="Entreprise" style='font-weight: bold; color: red;'>Notre entreprise</span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
@@ -16,17 +16,17 @@ include("connect.inc.php");?>
               <ul>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
                   <a href="Entreprise.php#a_propos" class="Header__nav__link--hasSubmenu">
-                    <span> À propos de nous </span> 
+                    <span style="color: #0000EE;"> À propos de nous </span> 
                   </a>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
                   <a href="Entreprise.php#histoire" class="Header__nav__link--hasSubmenu">
-                    <span> Notre histoire</span> 
+                    <span style="color: #0000EE;"> Notre histoire</span> 
                   </a>
                 </li>
                 <li class=""> <button class="toggle__submenus" aria-expanded="false"></button>
                   <a href="Entreprise.php#equipe" class="Header__nav__link--hasSubmenu">
-                    <span> Notre équipe</span>
+                    <span style="color: #0000EE;"> Notre équipe</span>
                   </a>
                 </li>
               </ul>
@@ -37,7 +37,7 @@ include("connect.inc.php");?>
       <li class="header_marker"> 
       <li class="">
       <a href="ConsultMainCategorie.php?genre=H" class="Header__nav__link--hasSubmenuv2">  
-          <span class="padded-element" data-text="Masculin"> Masculin</span> 
+          <span class="padded-element" data-text="Masculin" style='font-weight: bold; color: red;'> Articles Homme </span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
@@ -56,7 +56,7 @@ include("connect.inc.php");?>
                     $nomCategorie = $categ['NOMCATEGORIE'];
                   }
                   echo '<li class=""> <button class="toggle__submenus" aria-expanded="false"></button>';
-                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link--hasSubmenu"><span>' . $nomCategorie . '</span></a>';
+                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link--hasSubmenu" style="color: #0000EE;"><span>' . $nomCategorie . '</span></a>';
                   echo '<div class="Header__nav__submenu">';
                   $req2 = "SELECT C2.nomCategorie, C2.genreCategorie FROM Categorie C, Categorie C2 WHERE C.idCategorie = C2.idCategoriePere AND C.nomCategorie = :pCategorie AND C2.genreCategorie IN ('H', 'H/F')";
                   $lesSousCategories = oci_parse($connect, $req2);
@@ -65,7 +65,7 @@ include("connect.inc.php");?>
                   echo '<div class="Header__nav__submenu__categories">';
                   echo '<ul>';
                   while (($souscateg = oci_fetch_assoc($lesSousCategories)) != false) {
-                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
+                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'H'.'" class="Header__nav__link" style="font-weight: 550; text-align: left">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
                   }
                   oci_free_statement($lesSousCategories);
                   echo '</ul></div>';
@@ -81,7 +81,7 @@ include("connect.inc.php");?>
       <li class="header_marker"> 
       <li class="">
       <a href="ConsultMainCategorie.php?genre=F" class="Header__nav__link--hasSubmenuv2">  
-          <span data-text="Féminin"> Féminin</span> 
+          <span data-text="Féminin" style='font-weight: bold; color: red;'> Articles Femme </span> 
         </a>
         <div class="Header__nav__submenu Header__nav__submenu--topLevel">
           <div class="container">
@@ -100,7 +100,7 @@ include("connect.inc.php");?>
                     $nomCategorie = $categ['NOMCATEGORIE'];
                   }
                   echo '<li class=""> <button class="toggle__submenus" aria-expanded="false"></button>';
-                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link--hasSubmenu"><span>' . $nomCategorie . '</span></a>';
+                  echo '<a href="ConsultCategorie.php?nomCateg=' . $categ['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link--hasSubmenu" style="color: #0000EE;"><span>' . $nomCategorie . '</span></a>';
                   echo '<div class="Header__nav__submenu">';
                   $req2 = "SELECT C2.nomCategorie, C2.genreCategorie FROM Categorie C, Categorie C2 WHERE C.idCategorie = C2.idCategoriePere AND C.nomCategorie = :pCategorie AND C2.genreCategorie IN ('F', 'H/F')";
                   $lesSousCategories = oci_parse($connect, $req2);
@@ -109,7 +109,7 @@ include("connect.inc.php");?>
                   echo '<div class="Header__nav__submenu__categories">';
                   echo '<ul>';
                   while (($souscateg = oci_fetch_assoc($lesSousCategories)) != false) {
-                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
+                    echo '<li class=""><a href="ConsultProduct.php?nomSousCateg=' . $souscateg['NOMCATEGORIE'] . '&genre='.'F'.'" class="Header__nav__link" style="font-weight: 550; text-align: left">' . $souscateg['NOMCATEGORIE'] . '</a></li>';
                   }
                   oci_free_statement($lesSousCategories);
                   echo '</ul></div>';
@@ -132,10 +132,10 @@ include("connect.inc.php");?>
         </form>
     </div>
     <div id="images">
-      <a href="index.php"><img src="images/maison.png" alt="Accueil"></a>
+      <a href="index.php"><img src="images/maison.png" title="Accueil" alt="Accueil"></a>
       <a href="FormConnexion.php" title="Voir mon compte client"><img src="images/compte.png" alt="Compte"></a>
       <div class='panier1'> 
-      <a href="Panier.php"><img src="images/panier.png" alt="Panier"></a>
+      <a href="Panier.php"><img src="images/panier.png" title='Panier' alt="Panier"></a>
       <span class="cart-count"> 
       <?php 
       $reqQte = "SELECT COUNT(*) AS CO FROM PANIER WHERE idPanier = :idPan";

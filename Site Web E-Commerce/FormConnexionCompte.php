@@ -15,8 +15,8 @@
 <body>
 	<?php include_once("./include/header.php"); ?>
 	<div class="contentConnexion">
-		<div class="formulaire" style='padding-bottom: 20px; padding-top: 20px; text-align:left;'>
-			<span style='font-weight: bold'>Connexion</span> </br> </br>
+		<div class="formulaire" style='padding-bottom: 20px; padding-top: 20px; text-align:center;'>
+			<span style='font-weight: bold'>Connexion</span> </br>
 			<?php
 			if (isset($_GET['msgErreurConn'])) {
 				echo "<h2>" . htmlentities($_GET['msgErreurConn']) . "</h2>";
@@ -47,16 +47,16 @@
 			oci_free_statement($lesClients);
 			?>
 			<form action="TraitConnexion.php" method="POST">
-				Identifiant</br>
-				<input type='text' name='login' <?php
+				<div style='padding-bottom: 1px;'> Identifiant / E-mail </div> </br>
+				<input type='text' name='login' maxlength="64" <?php
 												echo "value='" . $login . "' ";
 												?> class="cadreInput" /> </br></br>
-				Mot de passe</br>
-				<input type='password' name='password' class="cadreInput" /> </br> </br>
-				Se souvenir de moi<input type='checkbox' name='souvenir' /> </br> </br>
+				<div style='padding-bottom: 1px;'> Mot de passe </div> </br>
+				<input type='password' name='password' class="cadreInput" maxlength="64"/> </br> </br>
+				Se souvenir de moi        <input type='checkbox' name='souvenir' /> </br> </br>
 				<input type='submit' name='Valider' value='Valider' /> </br></br>
 			</form>
-			<a style='text-decoration: underline;' href='FormCreationCompte.php' title='Nouveau compte'>Créer un compte</a>
+			<a style='text-decoration: none; border: 1px solid; border-radius: 50px; color: black;' href='FormCreationCompte.php' title='Nouveau compte'>Créer un compte</a>
 		</div>
 	</div>
 	<?php include_once("./include/footer.php"); ?>

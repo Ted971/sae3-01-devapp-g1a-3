@@ -31,7 +31,7 @@
         print htmlentities($e['message'] . ' pour cette requete : ' . $e['sqltext']);
     }
     include_once("./functions/displayCategorie.php");
-    echo "<H1> ". replace_accents($category)." : sous-catégories</H1>";
+    echo "<H1 style='font-weight: bold; color: #0000EE;'> ". replace_accents($category)."</H1>";
     while (($categ = oci_fetch_assoc($lesCategories)) != false) {
         // echo $categ['NOMCATEGORIE'];
         // echo "<br/>";

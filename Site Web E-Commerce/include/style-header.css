@@ -1,21 +1,23 @@
 .panier1 {
-  position: flex;
-
+  display: flex;
 }
 
-.cart-count span {
+.cart-count {
   background-color: black;
-  font-size: 12px;
+  font-size: 13px;
   color: white;
   border-radius: 50px;
   width: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 5%;
 }
 
 header {
   display: flex;
   justify-content: center;
   padding: 5px;
-  background: #F6F5F3;
+  background:	#F8F8F8;
 }/* f6f5f3 */
 
 
@@ -92,7 +94,7 @@ nav>ul>li:hover>div {
   /* min-height: 160px;
   min-width: 150px; */
   width: 100%;
-  background: #F6F5F3;
+  background:#F8F8F8;
 }
 nav>ul>li>div>div {
   top: 500;
@@ -191,14 +193,14 @@ img {
     [class^=Header__nav__link]:focus>span,
     [class^=Header__nav__link]:hover>span {
         background-position: center bottom;
-        font-weight: 700
+        font-weight: 700;
     }
     [class^=Header__nav__link]>span {
         font-size: 1.6rem;
         font-weight: 400;
         padding: 4px 0;
         background: linear-gradient(to top, #2e2d2d 2px, transparent 2px) center bottom -4px no-repeat;
-        transition: background-position .2s
+        transition: background-position .2s;
     }
     [class^=Header__nav__link]>span:after {
         display: block;
@@ -250,13 +252,13 @@ img {
 
     .Header__nav__submenu__block>ul>li {
       list-style-type: none;
-      padding-left: 10px;
-      margin-left: 20px;
+      padding-left: 0px;
+      margin-left: 10px;
     }
 
     .Header__nav__submenu__block [class^=Header__nav__link]>span {
       font-weight: 700;
-      margin-left: 37px;
+      margin-left: 25px;
     }
 
     .Header__nav__submenu__blockv2 {

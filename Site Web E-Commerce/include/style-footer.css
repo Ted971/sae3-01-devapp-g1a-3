@@ -71,7 +71,7 @@ input[type="password" i] {
 
  .footer_bottom {
   display:flex;
-  background: #f6f5f3;
+  background: rgba(226, 239, 252, 0.993);
   flex-direction: column;
   flex-grow: inherit;
 } 

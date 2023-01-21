@@ -1,5 +1,5 @@
 <?php
-include("./include/connect.inc.php");
+require_once("connect.inc.php");
 error_reporting(0);
 if (isset($_POST['Envoyer'])) {
     $req = "SELECT idClient FROM Client WHERE mailClient = :mClient";
@@ -18,7 +18,7 @@ if (isset($_POST['Envoyer'])) {
         oci_execute($insertForm);
         oci_commit($connect);
         oci_free_statement($insertForm);
-        header('location: FormContact.php?msgErr=Formulaire inséré');
+        header('location: FormContact.php?validation=Votre message a bien été envoyé !');
         exit();
     }
     header('location: FormContact.php?msgErr=Il n\'existe aucun client avec ce mail...');

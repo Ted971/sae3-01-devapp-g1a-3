@@ -30,7 +30,7 @@
     }
     include_once("./functions/displayCategorie.php");
     $full_genre = $genre == "H" ? "Homme" : "Femme";
-    echo "<H1> Catégories d'habits pour ". $full_genre ." </H1>";
+    echo "<H1 style='font-weight: bold; color: #0000EE;'> Articles ". $full_genre ." </H1>";
     while (($categ = oci_fetch_assoc($lesCategories)) != false) {
         // echo $categ['NOMCATEGORIE'];
         // echo "<br/>";
