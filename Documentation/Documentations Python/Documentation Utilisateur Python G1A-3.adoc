@@ -56,7 +56,7 @@ image::./images/import.png[Image des Imports]
 
 image::./images/variableG.png[Définition des variables]
 
-StockDico est un dictionnaire contenant les clés (noms des différents capteurs), les valeurs par défaut (chaine avec la date, l'heure et l'appareil) ainsi que les valeurs des capteurs demandées par l'utilisateur toutes séparées par des barres horizontales.
+StockDico est un dictionnaire contenant les clés (noms des différents capteurs) ainsi que les valeurs des capteurs demandées par l'utilisateur toutes séparées par des barres horizontales.
 
 StockSeuil est une liste avec la date, l'heure, l'appareil ainsi que le type de valeur de l'appareil ayant une valeur étant supérieure au seuil maximal paramétrée dans le fichier de configuration.
 
@@ -101,10 +101,8 @@ image::./images/try.png[]
 =====
 image::./images/debutchaine.png[]
 
-* On stocke l'heure et la date dans une variable _today_ et on assure la lisibilité de la chaine grâce au formattage de celle-ci.
 * On récupère et on stocke le nom de l'appareil ayant envoyé le message.
-* On commence a mettre en forme le début de la chaine grâce à la variable _chaine_.
-* On recopie la chaine dans _chaineSeu_ qui nous permet d'avoir la chaine initiale afin de gérer l'ajout dans les logs des Seuils.
+* On crée la chaine qui va contenir les données
 
 =====
 =====
