@@ -72,7 +72,7 @@ TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre d�
 
 http://192.168.224.139/~SAESYS03/SAE/Site-V2/[Lien vers le site web depuis l'IUT]
 
-https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence du site]| 
+
 |===
 
 
@@ -88,7 +88,7 @@ https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-C
 [cols="1,2,2",options=header]
 |===========================================================
 |Date  |Nom du document               |Lien
-|`14/01/2023`  |Pages du Site Web "La Parure Française"            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers le dossier contenant les différentes pages du site]
+|`14/01/2023`  |Pages du Site Web "La Parure Française"            | https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/tree/master/Site%20Web%20E-Commerce[Lien vers l'arborescence du site]| 
 |===========================================================
 
 

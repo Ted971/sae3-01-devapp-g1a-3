@@ -45,7 +45,6 @@ image::./images/import.png[Image des Imports]
     * Le module time permet d'importer la fonction sleep().
     * Le module paho.mqtt.client permet de créer une liaison avec les capteurs mqtt et de recevoir et lire les données de ceux-ci.
     * Le module json nous permet de charger et récupérer les fichiers JSON contenant les informations des capteurs.
-    * Le module signal permet d'utiliser les différentes fonctions de signaux et nous permettra plus précisement ici d'utiliser le signal SIGALRM (création d'une alarme).
     * Le module datetime nous permet de connaitre et stocker l'heure et la date exacte de chaque message d'un bus de données provenant d'un capteur.
     * Le module configparser permet de lire le fichier de configuration en .ini qui contient les différents paramètres du projet.
 
@@ -57,7 +56,7 @@ image::./images/import.png[Image des Imports]
 
 image::./images/variableG.png[Définition des variables]
 
-StockDico est un dictionnaire contenant les clés (noms des différents capteurs), les valeurs par défaut (chaine avec la date, l'heure et l'appareil) ainsi que les valeurs des capteurs demandées par l'utilisateur toutes séparées par des barres horizontales.
+StockDico est un dictionnaire contenant les clés (noms des différents capteurs) ainsi que les valeurs des capteurs demandées par l'utilisateur toutes séparées par des barres horizontales.
 
 StockSeuil est une liste avec la date, l'heure, l'appareil ainsi que le type de valeur de l'appareil ayant une valeur étant supérieure au seuil maximal paramétrée dans le fichier de configuration.
 
@@ -75,16 +74,6 @@ image::./images/defenvoie.png[]
 * La fonction envoie() parcours le dictionnaire _StockDico_ et défini un descripteur de fichier pour ouvrir ou créer un fichier _.txt_ puis écris les valeurs de ce capteur dans le fichier. Chaque capteur possède son fichier avec les valeurs correspondantes.
 * La deuxième boucle parcours la liste _StockSeuil_ et défini un descripteur de fichier pour ouvrir ou créer un fichier _logsSeuil.txt_ afin d'y écrire tous les dépassements de seuil relevés lors du fonctionnement de l'application.
 
-
-====
-
-* Méthode alarme et redéfinition du signal SIGALRM :
-
-====
-
-image::./images/defalarme.png[]
-
-    * Quand on recoit un signal _signal.SIGALRM_ alors on appelle la métode fonctionALRM() qui appelle la méthode envoie() afin de traiter l'écriture des valeurs dans les fichiers.
 
 ====
 
@@ -112,10 +101,8 @@ image::./images/try.png[]
 =====
 image::./images/debutchaine.png[]
 
-* On stocke l'heure et la date dans une variable _today_ et on assure la lisibilité de la chaine grâce au formattage de celle-ci.
 * On récupère et on stocke le nom de l'appareil ayant envoyé le message.
-* On commence a mettre en forme le début de la chaine grâce à la variable _chaine_.
-* On recopie la chaine dans _chaineSeu_ qui nous permet d'avoir la chaine initiale afin de gérer l'ajout dans les logs des Seuils.
+* On crée la chaine qui va contenir les données
 
 =====
 =====
@@ -149,7 +136,7 @@ image::./images/except.png[]
 
 =====
 
-image::./images/connecmqtt.png[]
+image::./images/connectmqtt.png[]
 
 * Cette partie du programme permet d'effectuer la gestion des bus _mqtt_ : 
 ** On commence par créer la connexion aux serveur _mqtt_ avec le nom du serveur en paramètre.
@@ -159,7 +146,7 @@ image::./images/connecmqtt.png[]
 
 =====
 =====
-image::./images/Capture d’écran du 2022-12-16 15-01-29.png[]
+image::./images/boucleinf.png[]
 
 * Le programme boucle à l'infini afin d'assurer la gestion de la fréquence d'écriture dans les fichiers capteurs. Pour ce faire, le programme utilise la fonction sleep() pour dormir _x_ minutes selon la fréquence d'écriture paramétrée dans le fichier de configuration.
 * Après que l'intervalle de temps soit passé, on remet a zéro le dictionnaire _StockDico_ et la liste _StockSeuil_ afin que chaque valeur écrite dans les fichiers capteurs soit unique.
