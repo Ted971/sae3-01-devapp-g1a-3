@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.MainFrameController">
+   <children>
+      <BorderPane layoutX="241.0" layoutY="130.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="98.0" prefWidth="1056.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="-2.0" prefHeight="34.0" prefWidth="1069.0" style="-fx-background-color: #032d4d;">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1016.0" onMouseClicked="#doQuit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/png-clquitter2.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children></Pane>
+                  <HBox layoutX="239.0" layoutY="34.0" prefHeight="63.0" prefWidth="828.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#doAccueil" prefHeight="63.0" prefWidth="307.0" style="-fx-background-color: white;" styleClass="menuItem" text="Accueil">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnGraphique" mnemonicParsing="false" prefHeight="63.0" prefWidth="257.0" style="-fx-background-color: white;" styleClass="menuItem" text="Graphique">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/linechart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#doConfigurer" prefHeight="63.0" prefWidth="283.0" style="-fx-background-color: white;" styleClass="menuItem" text="Configuration">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/setttings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="menu" layoutX="23.0" layoutY="51.0" text="MENU">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="menuRetour" layoutX="23.0" layoutY="51.0" text="MENU">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="722.0" prefWidth="240.0" style="-fx-background-color: #0A4969;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="83.0" prefHeight="514.0" prefWidth="241.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#doAccueil" prefHeight="64.0" prefWidth="241.0" style="-fx-background-color: #0A4969;" styleClass="sidebarItem" text="Accueil" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets right="40.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Revenir à l'accueil" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#doConfigurer" prefHeight="64.0" prefWidth="241.0" style="-fx-background-color: #0A4969;" styleClass="sidebarItem" text="Configuration" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets right="40.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/setttings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Configurer les graphiques" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#doQuit" prefHeight="64.0" prefWidth="241.0" style="-fx-background-color: #0A4969;" styleClass="sidebarItem" text="Quitter" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets right="40.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/quitter.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Quitter l'application" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="sliderConfig" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="302.0" layoutY="166.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane fx:id="sousMenu" prefHeight="53.0" prefWidth="827.0" visible="false">
+                           <children>
+                              <HBox prefHeight="54.0" prefWidth="828.0">
+                                 <children>
+                                    <Button fx:id="btnGraphAct" mnemonicParsing="false" prefHeight="53.0" prefWidth="113.0" styleClass="sousMenuItem" text="Activité">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphCo2" mnemonicParsing="false" prefHeight="53.0" prefWidth="117.0" styleClass="sousMenuItem" text="Co2">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphHum" mnemonicParsing="false" prefHeight="55.0" prefWidth="126.0" styleClass="sousMenuItem" text="Humidité">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphIll" mnemonicParsing="false" prefHeight="58.0" prefWidth="127.0" styleClass="sousMenuItem" text="Illumination">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphPress" mnemonicParsing="false" prefHeight="56.0" prefWidth="119.0" styleClass="sousMenuItem" text="Pression">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphTemp" mnemonicParsing="false" prefHeight="54.0" prefWidth="127.0" styleClass="sousMenuItem" text="Température">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button fx:id="btnGraphTvoc" mnemonicParsing="false" prefHeight="58.0" prefWidth="113.0" styleClass="sousMenuItem" text="Tvoc">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <AnchorPane prefHeight="650.0" prefWidth="827.0">
+                           <children>
+                              <Label fx:id="infoCapteur" layoutX="239.0" layoutY="157.0" prefHeight="318.0" prefWidth="365.0" text="infoCapteur" visible="false" AnchorPane.bottomAnchor="235.0" />
+                              <Button fx:id="btnAct" layoutX="82.0" layoutY="247.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnCo2" layoutX="240.0" layoutY="247.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnHum" layoutX="396.0" layoutY="247.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnIll" layoutX="555.0" layoutY="247.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="133.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnPress" layoutX="170.0" layoutY="450.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnTemp" layoutX="337.0" layoutY="450.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="129.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnTvoc" layoutX="505.0" layoutY="450.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="labelAct" layoutX="119.0" layoutY="205.0" prefHeight="21.0" prefWidth="67.0" styleClass="labelConfig" text="Activité" visible="false" />
+                              <Label fx:id="labelCo2" layoutX="286.0" layoutY="205.0" prefHeight="17.0" prefWidth="49.0" styleClass="labelConfig" text="Co2" visible="false" />
+                              <Label fx:id="labelHum" layoutX="428.0" layoutY="205.0" styleClass="labelConfig" text="Humidité" visible="false" />
+                              <Label fx:id="labelPress" layoutX="206.0" layoutY="413.0" styleClass="labelConfig" text="Pression" visible="false" />
+                              <Label fx:id="labelIll" layoutX="580.0" layoutY="205.0" styleClass="labelConfig" text="Illumination" visible="false" />
+                              <Label fx:id="labelTemp" layoutX="357.0" layoutY="413.0" styleClass="labelConfig" text="Température" visible="false" />
+                              <Label fx:id="labelTvoc" layoutX="552.0" layoutY="413.0" styleClass="labelConfig" text="Tvoc" visible="false" />
+                              <Button fx:id="btnS1" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnS2" layoutX="176.0" layoutY="89.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="132.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnS3" layoutX="330.0" layoutY="89.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="126.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnS4" layoutX="475.0" layoutY="89.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="128.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnS5" layoutX="622.0" layoutY="89.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" styleClass="configItem" text="Activer" visible="false">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="labelS1" layoutX="79.0" layoutY="49.0" styleClass="labelConfig" text="Salle 1" visible="false" />
+                              <Label fx:id="labelS2" layoutX="225.0" layoutY="47.0" styleClass="labelConfig" text="Salle 2" visible="false" />
+                              <Label fx:id="labelS3" layoutX="376.0" layoutY="47.0" styleClass="labelConfig" text="Salle 3" visible="false" />
+                              <Label fx:id="labelS4" layoutX="522.0" layoutY="47.0" styleClass="labelConfig" text="Salle 4" visible="false" />
+                              <Label fx:id="labelS5" layoutX="671.0" layoutY="47.0" styleClass="labelConfig" text="Salle 5" visible="false" />
+                              <LineChart fx:id="lincAct" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                <xAxis>
+                                  <CategoryAxis prefWidth="619.0" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincCo2" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincHum" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincIll" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincPress" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincTemp" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="lincTvoc" layoutX="82.0" layoutY="50.0" prefHeight="609.0" prefWidth="696.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <Label fx:id="nomGraphique" layoutX="387.0" layoutY="14.0" prefHeight="43.0" prefWidth="218.0" text="labelGraph" visible="false">
+                                 <font>
+                                    <Font name="MV Boli" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Slider fx:id="sliderCo2" layoutX="220.0" layoutY="328.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderHum" layoutX="391.0" layoutY="328.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderIll" layoutX="554.0" layoutY="328.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderAct" layoutX="62.0" layoutY="328.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderPress" layoutX="150.0" layoutY="516.0" max="4000.0" min="500.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderTemp" layoutX="317.0" layoutY="516.0" min="-10.0" styleClass="custom-slider" visible="false" />
+                              <Slider fx:id="sliderTvoc" layoutX="484.0" layoutY="516.0" styleClass="custom-slider" visible="false" />
+                              <Label fx:id="labelSlideAct" layoutX="92.0" layoutY="350.0" prefHeight="17.0" prefWidth="56.0" text="valAct" visible="false" />
+                              <Label fx:id="labelSlideCo2" layoutX="257.0" layoutY="350.0" prefHeight="17.0" prefWidth="64.0" text="valCo2" visible="false" />
+                              <Label fx:id="labelSlideHum" layoutX="421.0" layoutY="350.0" prefHeight="17.0" prefWidth="77.0" text="valTemp" visible="false" />
+                              <Label fx:id="labelSlideIll" layoutX="583.0" layoutY="350.0" prefHeight="17.0" prefWidth="47.0" text="valIll" visible="false" />
+                              <Label fx:id="labelSlidePress" layoutX="198.0" layoutY="544.0" prefHeight="17.0" prefWidth="60.0" text="valPress" visible="false" />
+                              <Label fx:id="labelSlideTemp" layoutX="373.0" layoutY="544.0" text="valTemp" visible="false" />
+                              <Label fx:id="labelSlideTvoc" layoutX="534.0" layoutY="544.0" prefHeight="17.0" prefWidth="61.0" text="valTvoc" visible="false" />
+                              <Label fx:id="infoIntervalle" layoutX="170.0" layoutY="599.0" styleClass="labelConfig" text="Temps entre chaque envoi de donnée" visible="false" />
+                              <TextField fx:id="intervalleEnvoi" layoutX="447.0" layoutY="600.0" prefHeight="25.0" prefWidth="39.0" visible="false" />
+                           </children></AnchorPane>
+                     </children></VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
