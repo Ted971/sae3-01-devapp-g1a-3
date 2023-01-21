@@ -50,7 +50,7 @@ La plupart des extensions ci-dessus sont déjà installés. Il vous faudra tout 
 =====
     pip install paho.mqtt
 =====
-Sauf si vous lancez depuis l'application JAVA et alors le JAVA s'occupera d'installer paho.mqtt.
+A noter : Si vous lancez directement l'application JAVA, cette dernière s'occupera d'installer paho.mqtt.
 
 ====
 
