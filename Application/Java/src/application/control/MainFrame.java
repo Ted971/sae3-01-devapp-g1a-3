@@ -10,8 +10,6 @@ import javafx.stage.StageStyle;
 
 /**
  * MainFrame est une classe qui étend la classe Application de JavaFX. Elle gère la création et l'affichage de la fenêtre principale de l'application.
- * 
- * @author Alexandre Benachir
  *
  */
 public class MainFrame extends Application {

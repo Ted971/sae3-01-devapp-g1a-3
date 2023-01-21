@@ -50,8 +50,6 @@ import javafx.util.Duration;
 
 /**
  * MainFrameController est une classe qui implémente l'interface Initializable de JavaFX. Elle gère les interactions entre la vue et le modèle pour la fenêtre principale de l'application.
- * 
- * @author Alexandre Benachir
  *
  */
 
