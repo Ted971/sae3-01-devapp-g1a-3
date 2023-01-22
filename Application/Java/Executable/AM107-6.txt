@@ -1,0 +1,5 @@
+2023 01 20 |15:04:23|activity:0|co2:1078|humidity:36.5|illumination:6|pressure:997|temperature:20.2|tvoc:251| 
+2023 01 20 |15:25:35|activity:0|co2:1035|humidity:36.5|illumination:6|pressure:997|temperature:20.2|tvoc:246| 
+2023 01 22 |18:43:46|activity:0|co2:458|humidity:29.5|illumination:1|pressure:1004.2|temperature:18.7|tvoc:109| 
+2023 01 22 |18:45:32|activity:0|co2:458|humidity:29.5|illumination:1|pressure:1004.2|temperature:18.7|tvoc:109| 
+2023 01 22 |18:55:34|activity:0|co2:456|humidity:29.5|illumination:1|pressure:1004.2|temperature:18.7|tvoc:109| 

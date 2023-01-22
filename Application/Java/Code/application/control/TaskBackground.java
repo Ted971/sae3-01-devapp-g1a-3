@@ -6,15 +6,15 @@ import java.util.TimerTask;
 import application.view.MainFrameController;
 import javafx.application.Platform;
 
-//Code d'une tâche gérée par Timer qui met à jour aléatoirement un quartier des LineChart.
+//Code d'une tâche gérée par Timer qui met à jour les LineChart.
 
 public class TaskBackground extends TimerTask {
 
 	// Controller pour la mise à jour des LineChart
 	private MainFrameController mf;
 
-	// Constructeur
-	// _mf : le controller contenant les LineChart
+	// Constructeur 
+	// _mf : le controller contenant le LineChart
 	public TaskBackground(MainFrameController _mf) {
 		this.mf = _mf;
 	}
@@ -22,7 +22,7 @@ public class TaskBackground extends TimerTask {
 	// Corps de la tâche lorsque elle est activée
 	@Override
 	public void run() {
-		// Mise en file d'attente (dans un Runnable) de la mise à jour des LineChart via mf.doGraphique()
+		// Mise en file d'attente (dans un Runnable) de la mise à jour du LineChart via mf.doGraphique()
 		// Ce Runnable sera exécuté par le thread GUI "dès que possible"
 		Platform.runLater(new Runnable() {
 			@Override

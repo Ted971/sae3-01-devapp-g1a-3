@@ -9,18 +9,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 /**
- * MainFrame est une classe qui étend la classe Application de JavaFX. Elle gère la création et l'affichage de la fenêtre principale de l'application.
- *
- */
+ * Classe principale de l'application qui étend la classe Application de JavaFX pour créer une fenêtre non décorée et gérer les événements de déplacement de la fenêtre.
+ **/
 public class MainFrame extends Application {
 	double x,y = 0;
 	/**
-	 * La méthode start() est utilisée pour démarrer l'application et afficher la fenêtre principale. Elle prend en paramètre un objet de type Stage qui est utilisé pour afficher la fenêtre.
-	 * 
-	 * @param _primaryStage un objet de type Stage qui est utilisé pour afficher la fenêtre principale de l'application.
-	 * 
-	 */
-
+	 * Méthode principale de la classe qui définit les éléments de la fenêtre principale de l'application, tels que les événements de déplacement de la fenêtre et le chargement du fichier FXML pour la vue.
+	 * @param _primaryStage La scène principale de l'application.
+	 **/
 	@Override
 	public void start(Stage _primaryStage) {
 		Stage primaryStage = _primaryStage;
@@ -54,10 +50,8 @@ public class MainFrame extends Application {
 	}
 
 	/**
-	 * La méthode runApp() est utilisée pour démarrer l'application en appelant la méthode launch() de la classe Application.
-	 *
-	 */
-
+	 * Méthode statique pour lancer l'application.
+	 **/
 	public static void runApp() {
 		Application.launch();
 	}

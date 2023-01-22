@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Map.Entry;
 import java.util.ResourceBundle;
 import java.util.Timer;
@@ -16,11 +14,7 @@ import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Wini;
 
 import application.control.TaskBackground;
-import javafx.scene.paint.Color;
 import javafx.animation.TranslateTransition;
-import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,7 +22,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Data;
@@ -45,13 +38,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import javafx.util.Duration;
-
-/**
- * MainFrameController est une classe qui implémente l'interface Initializable de JavaFX. Elle gère les interactions entre la vue et le modèle pour la fenêtre principale de l'application.
- *
- */
 
 public class MainFrameController implements Initializable {
 
@@ -64,14 +51,15 @@ public class MainFrameController implements Initializable {
 
 	private MainFrameController mfc;
 
+	// Manipulation de la fenêtre
+
 	/**
 	 * La méthode initContext() est utilisée pour initialiser le contexte de la fenêtre principale, en définissant l'objet de type Stage qui contient la fenêtre et en mettant à jour les informations d'accueil.
 	 * 
 	 * @param _containingStage un objet de type Stage qui contient la fenêtre principale de l'application.
 	 * @throws InvalidFileFormatException
-	 * @throws IOException
+	 * @throws IOException 
 	 */
-
 	public void initContext(Stage _containingStage) throws InvalidFileFormatException, IOException {
 		this.primaryStage = _containingStage;
 		this.initializeConfiguration();
@@ -84,7 +72,6 @@ public class MainFrameController implements Initializable {
 	 * 
 	 * @param mainframeC un objet de type MainFrameController qui est utilisé pour gérer les interactions entre la vue et le modèle pour la fenêtre principale.
 	 */
-
 	public void displayDialog(MainFrameController mainframeC) {
 		this.desacAccueil(true);
 		this.mfc = mainframeC;
@@ -112,13 +99,13 @@ public class MainFrameController implements Initializable {
 				tps); //time between executions
 	}
 
+	// Fonctions internes de gestion de fenêtre
 	/**
 	 * La méthode miseAJourAccueil() est utilisée pour mettre à jour les informations d'accueil de la fenêtre principale en utilisant les informations d'un fichier de configuration.
 	 * 
 	 * @throws InvalidFileFormatException
 	 * @throws IOException
 	 */
-
 	private void miseAJourAccueil() throws InvalidFileFormatException, IOException {
 		try {
 			String str="";
@@ -681,7 +668,7 @@ public class MainFrameController implements Initializable {
 				String[] cmd = new String[4];
 				cmd[0] = "taskkill";
 				cmd[1] = "/IM";
-				cmd[2] = "python.exe";
+				cmd[2] = "python3.10.exe";
 				cmd[3] = "/F";
 				Runtime rt = Runtime.getRuntime();
 				Process pr = rt.exec(cmd);
@@ -712,7 +699,6 @@ public class MainFrameController implements Initializable {
 	/**
 	 * La méthode doConfigurer est utilisée pour afficher la vue de configuration en désactivant les autres vues.
 	 */
-
 	@FXML
 	private void doConfigurer() {
 		desacConfig(true);
@@ -738,7 +724,6 @@ public class MainFrameController implements Initializable {
 	/**
 	 * La méthode doAccueil est utilisée pour afficher la vue d'accueil en désactivant les autres vues.
 	 */
-
 	@FXML
 	private void doAccueil() {
 		desacConfig(false);
@@ -750,7 +735,6 @@ public class MainFrameController implements Initializable {
 	 * La méthode desacConfig est utilisée pour désactiver ou activer les éléments de la vue de configuration en fonction de la valeur de change.
 	 * @param change La valeur booléenne qui détermine si les éléments doivent être activés ou désactivés.
 	 */
-
 	private void desacConfig(Boolean change) {
 		this.btnAct.setVisible(change);
 		this.btnCo2.setVisible(change);
@@ -798,7 +782,6 @@ public class MainFrameController implements Initializable {
 	 * La méthode desacGraphique est utilisée pour désactiver ou activer les éléments de la vue de graphique en fonction de la valeur de change.
 	 * @param change La valeur booléenne qui détermine si les éléments doivent être activés ou désactivés.
 	 */
-
 	private void desacGraphique(Boolean change) {
 		this.lincAct.setVisible(change);
 		this.lincCo2.setVisible(change);
@@ -814,7 +797,6 @@ public class MainFrameController implements Initializable {
 	 * La méthode desacAccueil est utilisée pour désactiver ou activer les éléments de la vue d'accueil en fonction de la valeur de change.
 	 * @param change La valeur booléenne qui détermine si les éléments doivent être activés ou désactivés.
 	 */
-
 	private void desacAccueil(Boolean change) {
 		this.infoCapteur.setVisible(change);
 	}
