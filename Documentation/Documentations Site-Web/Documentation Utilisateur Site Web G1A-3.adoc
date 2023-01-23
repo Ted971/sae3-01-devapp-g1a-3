@@ -22,13 +22,13 @@ Nous espérons que vous apprécierez votre expérience d'achat sur notre site we
 == Accéder au site web
 
 === Avec le réseau de l'IUT (filaire)
-Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse suivante : http://192.168.224.139/~SAESYS03/SAE/Site-V2
+Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse suivante : http://192.168.224.139/~SAESYS03/Site
 
 image::images/recherche.PNG[recherche]
 
 === Avec votre propre réseau
 
-Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse suivante : http://193.54.227.164/~SAESYS03/SAE/Site-V2
+Afin d'accéder à notre site ouvrez votre navigateur web et saisissez l'adresse suivante : http://193.54.227.164/~SAESYS03/Site
 
 image::images/rechercheLoin.PNG[recherche]
 
