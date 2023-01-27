@@ -20,7 +20,7 @@ Version finale du site : V6
 Site web e-commerce de *_La Parure Française_*
 
 == Présentation générale du Projet
-=== Conxtextualisation
+=== Contextualisation
 
 *_La Parure Française_* est une entreprise artisanale Française ayant besoin d'effectuer la refonte de son site d’E-commerce pour gagner des parts de marchés et de gagner en visibilité, bénéfices et notoriété. De plus, la vente de vêtements est un milieu très concurrentiel et cette refonte permettrait de posséder un avantage concurrentiel national et d'étendre l'image de la qualité Française.
 
