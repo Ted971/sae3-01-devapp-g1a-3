@@ -63,6 +63,8 @@ Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.f
 
 TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
 
+Documentation utilisateur site web finalisée : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Documentation%20Utilisateur%20Site%20Web%20G1A-3.adoc[Lien vers la documentation]
+
 === Site-Web E-Commerce
 
 [cols="1,2,2",options=header]
