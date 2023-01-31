@@ -165,5 +165,5 @@ http://192.168.224.139/~SAESYS03/Site[Lien vers le site web depuis l'IUT]
 - Lien vers les `user stories` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22+label%3A%22En+cours%22+[ici] +
 - Lien vers les `tâches` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3AT%C3%A2che+label%3A%22En+cours%22+[ici] +
 - Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/8[ici] +
-- Lien vers le `diaporama` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/8[ici] +
+- Lien vers le `diaporama` : https://github.com/Ted971/sae3-01-devapp-g1a-3/blob/master/Soutenance%20SAE%20Finale.pptx[ici] +
 
