@@ -1,12 +1,4 @@
-= SAÉ 3.01 2022-2023
-:icons: font
-:models: models
-:experimental:
-:incremental:
-:numbered:
-:toc: macro
-:window: _blank
-:correction!:
+
 
 // Useful definitions
 :asciidoc: http://www.methods.co.nz/asciidoc[AsciiDoc]
@@ -28,22 +20,13 @@ ifdef::env-github[]
 :icongit: Git
 endif::[]
 
-// /!\ A MODIFIER !!!
-:baseURL: https://github.com/IUT-Blagnac/sae3-01-template
 
-// Tags
-image:{baseURL}/actions/workflows/blank.yml/badge.svg[Bidon] 
-image:{baseURL}/actions/workflows/build.yml/badge.svg[Build] 
-image:{baseURL}/actions/workflows/tests.yml/badge.svg[Tests] 
-image:https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg[License: MPL-2.0, link="https://opensource.org/licenses/MPL-2.0"]
+
 //---------------------------------------------------------------
 
-TIP: Pensez à mettre à jour les infos dans ce fichier pour que les badges pointent sur les résultats effectifs de vos intégrations continue ou sur la bonne licence logicielle.
 
-WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT1 Informatique de l'IUT de Blagnac.
 
-Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/OUF7gxEa).
-Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
+Ce fichier `README.adoc` , fait partie du dépôt montre les traces et rendus du projet de création d'un site web, et d'une application pour un client 
 
 toc::[]
 
@@ -61,7 +44,7 @@ Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.f
 
 == Réalisations 
 
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+
 
 Documentation utilisateur site web finalisée : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/blob/master/Documentation/Documentations%20Site-Web/Documentation%20Utilisateur%20Site%20Web%20G1A-3.adoc[Lien vers la documentation]
 
@@ -182,28 +165,5 @@ http://192.168.224.139/~SAESYS03/Site[Lien vers le site web depuis l'IUT]
 - Lien vers les `user stories` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22+label%3A%22En+cours%22+[ici] +
 - Lien vers les `tâches` en cours : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/issues?q=is%3Aopen+is%3Aissue+label%3AT%C3%A2che+label%3A%22En+cours%22+[ici] +
 - Lien vers la `future version` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/8[ici] +
+- Lien vers le `diaporama` : https://github.com/IUT-Blagnac/sae3-01-devapp-g1a-3/milestone/8[ici] +
 
-
-=== Évaluations hebdomadaires
-
-
-
-NOTE: Les notes ci-dessous sont mises à jour directement par les enseignants responsables de la compétence 5.
-
-
-
-ifdef::env-github[]
-
-image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=2038500358&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=2038500358&amp;format=image]
-
-endif::[]
-
-
-
-ifndef::env-github[]
-
-++++
-
-<iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=2038500358&amp;format=interactive"></iframe>++++
-
-endif::[]
